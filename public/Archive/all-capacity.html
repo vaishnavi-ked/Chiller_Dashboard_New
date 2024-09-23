@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Energy Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet" />
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" type="text/css" />
+    <!-- Custom styles for this page -->
+    <!-- <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet"> -->
+  </head>
+
+  <body id="page-top" class="page-overview sidebar-toggled">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled" id="accordionSidebar">
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="overview.html">
+          <div class="sidebar-brand-icon">
+            <img src="img/KED_logo_PNG-fav.png" alt="logo" />
+          </div>
+          <div class="sidebar-brand-text mx-3">
+            <img src="img/logo.png" alt="logo" />
+          </div>
+        </a>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0" />
+        <!-- Nav Item - Charts -->
+        <li class="nav-item ">
+          <a class="nav-link" href="overview.html">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Overview</span></a>
+        </li>
+        <!-- Nav Item - Dashboard -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="capacity.html">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span> Dashboard</span></a
+          >
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="water.html">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Water Meter System</span></a
+          >
+        </li> -->
+        <li class="nav-item ">
+          <a class="nav-link" href="Asset-management.html">
+            <i class="fas fa-fw fa-map"></i>
+            <span>Asset Management</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true"
+            aria-controls="collapseUtilities">
+            <i class="fas fa-fw fa-map"></i>
+            <span>Capacity Management</span>
+          </a>
+          <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+            data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+              <!-- <h6 class="collapse-header">Custom Utilities:</h6> -->
+              <a class="collapse-item active" href="capacity.html">Site</a>
+              <a class="collapse-item" href="buildings-capacity.html">Building</a>
+              <a class="collapse-item" href="floor-capacity.html">Floor</a>
+              <a class="collapse-item" href="rack-capacity.html">Rack</a>
+              <a class="collapse-item" href="server-capacity.html">Server</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="buildings.html">
+            <i class="fas fa-fw fa-map"></i>
+            <span>Buildings</span></a>
+        </li>
+        <li class="nav-item dropdown no-arrow">
+          <a class="nav-link dropdown-toggle" href="cooling.html">
+            <i class="fas fa-fw fa-map"></i>
+            <span>Cooling</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown no-arrow">
+          <a class="nav-link dropdown-toggle" href="connectivity.html">
+            <i class="fas fa-fw fa-map"></i>
+            <span>Connectivity</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown no-arrow">
+          <a class="nav-link dropdown-toggle" href="power-capacity.html">
+            <i class="fas fa-fw fa-map"></i>
+            <span>Power</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown no-arrow">
+          <a class="nav-link dropdown-toggle" href="health-capacity.html">
+            <i class="fas fa-fw fa-map"></i>
+            <span>Health</span>
+          </a>
+        </li>
+        <!-- Divider -->
+
+
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block" />
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+          <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+      </ul>
+      <!-- End of Sidebar -->
+
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+          <!-- Topbar -->
+          <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+            <!-- Sidebar Toggle (Topbar) -->
+            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+              <i class="fa fa-bars"></i>
+            </button>
+
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav ml-auto">
+              <!-- <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="Asset-management.html">
+                  Assets
+                </a>
+              </li>
+              <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="space-capacity.html">
+                  Capacity
+                </a>
+              </li>
+              <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="cooling.html">
+                  Cooling
+                </a>
+              </li>
+              <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="connectivity.html">
+                  Connectivity
+                </a>
+              </li>
+              <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="power-capacity.html">
+                  Power
+                </a>
+              </li>
+              <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="health-capacity.html">
+                  Health
+                </a>
+              </li> -->
+              <li class="nav-item dropdown no-arrow mx-1">
+                <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-bell fa-fw"></i>
+                  <!-- Counter - Alerts -->
+                  <span class="badge badge-danger badge-counter">3+</span>
+                </a>
+                <!-- Dropdown - Alerts -->
+                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                  aria-labelledby="alertsDropdown">
+                  <h6 class="dropdown-header">
+                    Alerts Center
+                  </h6>
+                  <a class="dropdown-item d-flex align-items-center" href="server.html">
+                    <div class="mr-3">
+                      <div class="icon-circle bg-primary">
+                        <i class="fas fa-file-alt text-white"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="small text-gray-500">November 4, 2020</div>
+                      <span class="font-weight-bold">Server issue</span>
+                    </div>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="cabin.html">
+                    <div class="mr-3">
+                      <div class="icon-circle bg-warning">
+                        <i class="fas fa-exclamation-triangle text-white"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="small text-gray-500">November 4, 2020</div>
+                      Rack Temperature is High
+                    </div>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="mr-3">
+                      <div class="icon-circle bg-warning">
+                        <i class="fas fa-exclamation-triangle text-white"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="small text-gray-500">November 3, 2020</div>
+                      Warning: Switchboard - Generator Group
+                    </div>
+                  </a>
+                  <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                </div>
+              </li>
+              <div class="topbar-divider d-none d-sm-block"></div>
+
+              <!-- Nav Item - User Information -->
+              <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="#">
+                  <img class="img-scnd-logo" src="img/logo-trid.png" />
+                </a>
+              </li>
+
+              <div class="topbar-divider d-none d-sm-block"></div>
+
+              <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <span class="mr-2 d-none d-lg-inline text-gray-600 small">Supervisor</span>
+                  <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+                </a>
+                <!-- Dropdown - User Information -->
+                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Profile
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Settings
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Activity Log
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Logout
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <!-- End of Topbar -->
+
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
+            <!-- Page Heading -->
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+              <h1 class="m-0 font-weight-bold text-primary">
+                <a href="overview.html">Overview</a> /
+                <a href="capacity.html">Dashboard of Mumbai</a> / Dashboard Overview
+              </h1>
+              <!-- <a
+                href="#"
+                class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                ><i class="fas fa-download fa-sm text-white-50"></i> Generate
+                Report</a
+              > -->
+            </div>
+
+            <!-- Content Row -->
+            <div class="row">
+              <div class="col-xl-4 col-lg-4">
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between rackTtitle">
+                    <h6 class="m-0 font-weight-bold text-primary">
+                      Site Capacity Overview
+                    </h6>
+                    <!-- <div class="rackOptions"><span class="rackDetails"><a href="#" title="Details" data-toggle="modal" data-target="#cpacityDetails"><i class="fas fa-fw fa-eye"></i></a></span><span class="rackHealth"><a href="#"  title="Health"  data-toggle="modal" data-target="#healthDetails"><i class="fas fa-fw fa-heartbeat"></i></a></span></div> -->
+                  </div>
+                  <div class="card-body">
+                    <div id="capacityOverview"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-4 col-lg-4">
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between rackTtitle">
+                    <h6 class="m-0 font-weight-bold text-primary">
+                      Site Quick View
+                    </h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="quickView">
+                      <table id="quickData" width="100%" cellspacing="0">
+                        <thead>
+                          <tr>
+                            <th>Site Name</th>
+                            <th>Location</th>
+                            <th>No. Buildings</th>
+                            <th>No. Floors</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><a href="buildings.html">GPX</a></td>
+                            <td>location1</td>
+                            <td>4</td>
+                            <td>8</td>
+                          </tr>
+                          <tr>
+                            <td><a href="buildings.html">Netmagic</a></td>
+                            <td>location2</td>
+                            <td>4</td>
+                            <td>8</td>
+                          </tr>
+                          <tr>
+                            <td><a href="buildings.html">Site 3</a></td>
+                            <td>location3</td>
+                            <td>4</td>
+                            <td>8</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-xl-4 col-lg-4">
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between rackTtitle">
+                    <h6 class="m-0 font-weight-bold text-primary">
+                      Quick Alerts
+                    </h6>
+                    <!-- <div class="rackOptions"><span class="rackDetails"><a href="#" title="Details" data-toggle="modal" data-target="#cpacityDetails"><i class="fas fa-fw fa-eye"></i></a></span><span class="rackHealth"><a href="#"  title="Health"  data-toggle="modal" data-target="#healthDetails"><i class="fas fa-fw fa-heartbeat"></i></a></span></div> -->
+                  </div>
+                  <div class="card-body">
+                    <div id="alertSpace">
+                      <div class="row">
+                        <div class="col-lg-3 mb-3">
+                          <div class="card bg-danger text-white shadow">
+                            <div class="card-body">
+                              Danger
+                              <div class="text-white-50 small">1</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 mb-3">
+                          <div class="card bg-success text-white shadow">
+                            <div class="card-body">
+                              Success
+                              <div class="text-white-50 small">0</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 mb-3">
+                          <div class="card bg-warning text-white shadow">
+                            <div class="card-body">
+                              Warning
+                              <div class="text-white-50 small">2</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 mb-3">
+                          <div class="card bg-secondary text-white shadow">
+                            <div class="card-body">
+                              Acknowledge
+                              <div class="text-white-50 small">0</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-12 mb-3">
+                          <a href="cabin.html">
+                            <div class="mb-1 py-0 border-left-warning bg-gray-200">
+                              <div class="card-body">
+                                Rack Temperature Low - Rack_A_1
+                              </div>
+                            </div>
+                          </a>
+                          <a href="cabin.html">
+                            <div class="mb-1 py-0 border-left-warning bg-gray-200">
+                              <div class="card-body">
+                                Rack Temperature High - Rack_C_8
+                              </div>
+                            </div>
+                          </a>
+                          <a href="server.html">
+                            <div class="mb-1 py-0 border-left-danger bg-gray-200">
+                              <div class="card-body">
+                                Server Issue - server name
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="col-xl-4 col-lg-4">
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between rackTtitle">
+                    <h6 class="m-0 font-weight-bold text-primary">
+                      Floor Space Capacity
+                    </h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="floorSpace"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-4">
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between rackTtitle">
+                    <h6 class="m-0 font-weight-bold text-primary">
+                      Cabinet Space Capacity
+                    </h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="cabSpace"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-4">
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between rackTtitle">
+                    <h6 class="m-0 font-weight-bold text-primary">
+                      Item Counts
+                    </h6>
+                    <!-- <div class="rackOptions"><span class="rackDetails"><a href="#" title="Details" data-toggle="modal" data-target="#cpacityDetails"><i class="fas fa-fw fa-eye"></i></a></span><span class="rackHealth"><a href="#"  title="Health"  data-toggle="modal" data-target="#healthDetails"><i class="fas fa-fw fa-heartbeat"></i></a></span></div> -->
+                  </div>
+                  <div class="card-body">
+                    <div id="itemCounts"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="row">
+              
+              
+            </div> -->
+            <div class="row">
+              <div class="col-xl-4 col-lg-4">
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between rackTtitle">
+                    <h6 class="m-0 font-weight-bold text-primary">
+                      Capacity and Status
+                    </h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="cStatus">
+                      <div class="secStatus">
+                        <div id="fanCapacity"></div>
+                      </div>
+                      <div class="secStatus">
+                        <div id="coolCapacity"></div>
+                      </div>
+                      <div class="secStatus">
+                        <div id="freeCool"></div>
+                      </div>
+                      <div class="secStatus">
+                        <div id="heatingCap"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-4">
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between rackTtitle">
+                    <h6 class="m-0 font-weight-bold text-primary">
+                      Budget Power Capacity
+                    </h6>
+                    <!-- <div class="rackOptions"><span class="rackDetails"><a href="#" title="Details" data-toggle="modal" data-target="#cpacityDetails"><i class="fas fa-fw fa-eye"></i></a></span><span class="rackHealth"><a href="#"  title="Health"  data-toggle="modal" data-target="#healthDetails"><i class="fas fa-fw fa-heartbeat"></i></a></span></div> -->
+                  </div>
+                  <div class="card-body">
+                    <div id="powerCapacity"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-4">
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between rackTtitle">
+                    <h6 class="m-0 font-weight-bold text-primary">
+                      Data Port Usage By Connector
+                    </h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="portUsage"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Content Row -->
+          </div>
+          <!-- /.container-fluid -->
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Copyright &copy; Your Website 2020</span>
+            </div>
+          </div>
+        </footer>
+        <!-- End of Footer -->
+      </div>
+      <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- Button trigger modal -->
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button> -->
+    <!-- Resources -->
+    <!-- amCharts javascript sources -->
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/serial.js"></script>
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/themes/dark.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/geodata/worldLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/dark.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Page level plugins -->
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="js/demo/datatables-demo.js"></script>
+    <!-- Step 1 - Include the fusioncharts core library -->
+    <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+    <!-- Step 2 - Include the fusion theme -->
+    <script type="text/javascript"
+      src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.candy.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script type="text/JavaScript">
+      /**
+      * ---------------------------------------
+      * This demo was created using amCharts 4.
+      * 
+      * For more information visit:
+      * https://www.amcharts.com/
+      * 
+      * Documentation is available at:
+      * https://www.amcharts.com/docs/v4/
+      * ---------------------------------------
+      */
+
+      // Themes begin
+      am4core.useTheme(am4themes_dark);
+      am4core.useTheme(am4themes_animated);
+      // Themes end
+
+      var chart = am4core.create("capacityOverview", am4charts.RadarChart);
+      chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+      chart.data = [
+        {
+          category: "Racks",
+          value1: 30,
+          value2: 40
+        },
+        {
+          category: "Floors",
+          value1: 70,
+          value2: 30
+        },
+        {
+          category: "Power/Energy",
+          value1: 53,
+          value2: 47
+        },
+        {
+          category: "Servers",
+          value1: 88,
+          value2: 10
+        },
+        {
+          category: "Network",
+          value1: 65,
+          value2: 30
+        }
+      ];
+
+      chart.padding(20, 20, 20, 20);
+
+      var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+      categoryAxis.dataFields.category = "category";
+      categoryAxis.renderer.labels.template.location = 0.5;
+      categoryAxis.renderer.tooltipLocation = 0.5;
+      categoryAxis.renderer.cellStartLocation = 0.2;
+      categoryAxis.renderer.cellEndLocation = 0.8;
+
+      var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+      valueAxis.tooltip.disabled = true;
+      valueAxis.renderer.labels.template.horizontalCenter = "left";
+      valueAxis.min = 0;
+
+      var series1 = chart.series.push(new am4charts.RadarColumnSeries());
+      series1.columns.template.tooltipText = "{name}: {valueY.value}";
+      series1.columns.template.width = am4core.percent(100);
+      series1.name = "Free";
+      series1.dataFields.categoryX = "category";
+      series1.dataFields.valueY = "value1";
+      series1.stacked = true;
+
+      var series2 = chart.series.push(new am4charts.RadarColumnSeries());
+      series2.columns.template.width = am4core.percent(100);
+      series2.columns.template.tooltipText = "{name}: {valueY.value}";
+      series2.name = "Used";
+      series2.dataFields.categoryX = "category";
+      series2.dataFields.valueY = "value2";
+      series2.stacked = true;
+
+      chart.seriesContainer.zIndex = -1;
+
+      // chart.scrollbarX = new am4core.Scrollbar();
+      // chart.scrollbarX.exportable = false;
+      // chart.scrollbarY = new am4core.Scrollbar();
+      // chart.scrollbarY.exportable = false;
+
+      chart.cursor = new am4charts.RadarCursor();
+      chart.cursor.xAxis = categoryAxis;
+      chart.cursor.fullWidthXLine = true;
+      chart.cursor.lineX.strokeOpacity = 0;
+      chart.cursor.lineX.fillOpacity = 0.1;
+      chart.cursor.lineX.fill = am4core.color("#000000"); 
+
+      /* Add legend */
+      chart.legend = new am4charts.Legend();
+    </script>
+
+
+    <script type="text/javascript">
+      AmCharts.makeChart("floorSpace",
+        {
+          "type": "serial",
+          "categoryField": "category",
+          "startDuration": 1,
+          "color": "#FFFFFF",
+          "theme": "dark",
+          "categoryAxis": {
+            "gridPosition": "start",
+            "axisColor": "#FFFFFF",
+            "gridColor": "#FFFFFF"
+          },
+          "trendLines": [],
+          "graphs": [
+            {
+              "balloonText": "[[title]] of [[category]]:[[value]]",
+              "fillAlphas": 1,
+              "id": "AmGraph-1",
+              "title": "Existing Cabinets",
+              "type": "column",
+              "valueField": "column-1"
+            },
+            {
+              "balloonText": "[[title]] of [[category]]:[[value]]",
+              "fillAlphas": 1,
+              "id": "AmGraph-2",
+              "title": "Potential New Cabinets",
+              "type": "column",
+              "valueField": "column-2"
+            }
+          ],
+          "guides": [],
+          "valueAxes": [
+            {
+              "id": "ValueAxis-1",
+              "stackType": "regular",
+              "axisColor": "#FFFFFF",
+              "tickLength": 3,
+              "title": "Cabinet Count"
+            }
+          ],
+          "allLabels": [],
+          "balloon": {},
+          "legend": {
+            "enabled": true,
+            "borderColor": "#FFFFFF",
+            "color": "#FFFFFF",
+            "useGraphSettings": true
+          },
+          "titles": [
+            {
+              "id": "Title-1",
+              "size": 15,
+              "text": ""
+            }
+          ],
+          "dataProvider": [
+            {
+              "category": "GPX",
+              "column-1": 48,
+              "column-2": 35
+            },
+            {
+              "category": "Netmagic",
+              "column-1": 66,
+              "column-2": 47
+            },
+            {
+              "category": "SITE 3",
+              "column-1": 72,
+              "column-2": 43
+            }
+          ]
+        }
+      );
+    </script>
+    <script type="text/javascript">
+      AmCharts.makeChart("cabSpace",
+        {
+          "type": "serial",
+          "categoryField": "category",
+          "startDuration": 1,
+          "color": "#FFFFFF",
+          "theme": "dark",
+          "categoryAxis": {
+            "gridPosition": "start",
+            "axisColor": "#FFFFFF",
+            "gridColor": "#FFFFFF"
+          },
+          "trendLines": [],
+          "graphs": [
+            {
+              "balloonText": "[[title]] of [[category]]:[[value]]",
+              "fillAlphas": 1,
+              "id": "AmGraph-1",
+              "title": "Free",
+              "type": "column",
+              "valueField": "column-1"
+            },
+            {
+              "balloonText": "[[title]] of [[category]]:[[value]]",
+              "fillAlphas": 1,
+              "id": "AmGraph-2",
+              "title": "Used",
+              "type": "column",
+              "valueField": "column-2"
+            }
+          ],
+          "guides": [],
+          "valueAxes": [
+            {
+              "id": "ValueAxis-1",
+              "stackType": "regular",
+              "axisColor": "#FFFFFF",
+              "tickLength": 3,
+              "title": "Rack Units"
+            }
+          ],
+          "allLabels": [],
+          "balloon": {},
+          "legend": {
+            "enabled": true,
+            "borderColor": "#FFFFFF",
+            "color": "#FFFFFF",
+            "useGraphSettings": true
+          },
+          "titles": [
+            {
+              "id": "Title-1",
+              "size": 15,
+              "text": ""
+            }
+          ],
+          "dataProvider": [
+            {
+              "category": "GPX",
+              "column-1": 2300,
+              "column-2": 2700
+            },
+            {
+              "category": "Netmagic",
+              "column-1": 2100,
+              "column-2": 2200
+            },
+            {
+              "category": "SITE 3",
+              "column-1": 900,
+              "column-2": 1000
+            }
+          ]
+        }
+      );
+    </script>
+    <script type="text/javascript">
+      AmCharts.makeChart("powerCapacity",
+        {
+          "type": "serial",
+          "categoryField": "category",
+          "startDuration": 1,
+          "color": "#FFFFFF",
+          "theme": "dark",
+          "categoryAxis": {
+            "gridPosition": "start",
+            "axisColor": "#FFFFFF",
+            "gridColor": "#FFFFFF"
+          },
+          "trendLines": [],
+          "graphs": [
+            {
+              "balloonText": "[[title]] of [[category]]:[[value]]",
+              "fillAlphas": 1,
+              "id": "AmGraph-1",
+              "title": "Budgeted Load",
+              "type": "column",
+              "valueField": "column-1"
+            },
+            {
+              "balloonText": "[[title]] of [[category]]:[[value]]",
+              "fillAlphas": 1,
+              "id": "AmGraph-2",
+              "title": "Remaining Capacity",
+              "type": "column",
+              "valueField": "column-2"
+            }
+          ],
+          "guides": [],
+          "valueAxes": [
+            {
+              "id": "ValueAxis-1",
+              "stackType": "regular",
+              "axisColor": "#FFFFFF",
+              "tickLength": 3,
+              "title": "kW"
+            }
+          ],
+          "allLabels": [],
+          "balloon": {},
+          "legend": {
+            "enabled": true,
+            "borderColor": "#FFFFFF",
+            "color": "#FFFFFF",
+            "useGraphSettings": true
+          },
+          "titles": [
+            {
+              "id": "Title-1",
+              "size": 15,
+              "text": ""
+            }
+          ],
+          "dataProvider": [
+            {
+              "category": "GPX",
+              "column-1": 200,
+              "column-2": 700
+            },
+            {
+              "category": "Netmagic",
+              "column-1": 400,
+              "column-2": 600
+            },
+            {
+              "category": "SITE 3",
+              "column-1": 250,
+              "column-2": 500
+            }
+          ]
+        }
+      );
+    </script>
+    <script type="text/javascript">
+      AmCharts.makeChart("portUsage",
+        {
+          "type": "serial",
+          "categoryField": "category",
+          "startDuration": 1,
+          "color": "#FFFFFF",
+          "theme": "dark",
+          "categoryAxis": {
+            "gridPosition": "start",
+            "axisColor": "#FFFFFF",
+            "gridColor": "#FFFFFF"
+          },
+          "trendLines": [],
+          "graphs": [
+            {
+              "balloonText": "[[title]] of [[category]]:[[value]]",
+              "fillAlphas": 1,
+              "id": "AmGraph-1",
+              "title": "Free",
+              "type": "column",
+              "valueField": "column-1"
+            },
+            {
+              "balloonText": "[[title]] of [[category]]:[[value]]",
+              "fillAlphas": 1,
+              "id": "AmGraph-2",
+              "title": "Connected",
+              "type": "column",
+              "valueField": "column-2"
+            }
+          ],
+          "guides": [],
+          "valueAxes": [
+            {
+              "id": "ValueAxis-1",
+              "stackType": "regular",
+              "axisColor": "#FFFFFF",
+              "tickLength": 3,
+              "title": "Port Count"
+            }
+          ],
+          "allLabels": [],
+          "balloon": {},
+          "legend": {
+            "enabled": true,
+            "borderColor": "#FFFFFF",
+            "color": "#FFFFFF",
+            "useGraphSettings": true
+          },
+          "titles": [
+            {
+              "id": "Title-1",
+              "size": 15,
+              "text": ""
+            }
+          ],
+          "dataProvider": [
+            {
+              "category": "GPX",
+              "column-1": 6000,
+              "column-2": 2700
+            },
+            {
+              "category": "Netmagic",
+              "column-1": 4000,
+              "column-2": 1800
+            },
+            {
+              "category": "SITE 3",
+              "column-1": 5500,
+              "column-2": 1000
+            }
+          ]
+        }
+      );
+    </script>
+    <script type="text/javascript">
+      AmCharts.makeChart("itemCounts",
+        {
+          "type": "serial",
+          "categoryField": "category",
+          "startDuration": 1,
+          "theme": "dark",
+          "categoryAxis": {
+            "gridPosition": "start"
+          },
+          "trendLines": [],
+          "graphs": [
+            {
+              "balloonText": "[[title]] of [[category]]:[[value]]",
+              "fillAlphas": 1,
+              "id": "AmGraph-1",
+              "title": "CRAC",
+              "type": "column",
+              "valueField": "CRAC"
+            },
+            {
+              "balloonText": "[[title]] of [[category]]:[[value]]",
+              "fillAlphas": 1,
+              "id": "AmGraph-2",
+              "title": "Cabinets",
+              "type": "column",
+              "valueField": "Cabinets"
+            },
+            {
+              "balloonText": "[[title]] of [[category]]:[[value]]",
+              "fillAlphas": 1,
+              "id": "AmGraph-3",
+              "title": "Data Panel",
+              "type": "column",
+              "valueField": "Data Panel"
+            },
+            {
+              "balloonText": "[[title]] of [[category]]:[[value]]",
+              "fillAlphas": 1,
+              "type": "column",
+              "id": "AmGraph-4",
+              "title": "Device",
+              "valueField": "Device"
+            },
+            {
+              "balloonText": "[[title]] of [[category]]:[[value]]",
+              "fillAlphas": 1,
+              "type": "column",
+              "id": "AmGraph-5",
+              "title": "Floor PDU",
+              "valueField": "Floor PDU"
+            },
+            {
+              "balloonText": "[[title]] of [[category]]:[[value]]",
+              "fillAlphas": 1,
+              "type": "column",
+              "id": "AmGraph-6",
+              "title": "Network",
+              "valueField": "Network"
+            },
+            {
+              "balloonText": "[[title]] of [[category]]:[[value]]",
+              "fillAlphas": 1,
+              "type": "column",
+              "id": "AmGraph-7",
+              "title": "Power Outlets",
+              "valueField": "Power Outlets"
+            },
+            {
+              "balloonText": "[[title]] of [[category]]:[[value]]",
+              "fillAlphas": 1,
+              "type": "column",
+              "id": "AmGraph-8",
+              "title": "Probe",
+              "valueField": "Probe"
+            },
+            {
+              "balloonText": "[[title]] of [[category]]:[[value]]",
+              "fillAlphas": 1,
+              "type": "column",
+              "id": "AmGraph-9",
+              "title": "Rack PDU",
+              "valueField": "Rack PDU"
+            },
+            {
+              "balloonText": "[[title]] of [[category]]:[[value]]",
+              "fillAlphas": 1,
+              "type": "column",
+              "id": "AmGraph-10",
+              "title": "UPS",
+              "valueField": "UPS"
+            }
+          ],
+          "guides": [],
+          "valueAxes": [
+            {
+              "id": "ValueAxis-1",
+              "stackType": "regular",
+              "title": "Item Count"
+            }
+          ],
+          "allLabels": [],
+          "balloon": {},
+          "legend": {
+            "enabled": true,
+            "useGraphSettings": true
+          },
+          "titles": [
+            {
+              "id": "Title-1",
+              "size": 15,
+              "text": ""
+            }
+          ],
+          "dataProvider": [
+            {
+              "category": "GPX",
+              "Cabinets": 5,
+              "CRAC": 8,
+              "Data Panel": 61,
+              "Device": 44,
+              "Floor PDU": 31,
+              "Network": 83,
+              "Power Outlets": 22,
+              "Probe": 17,
+              "Rack PDU": 46,
+              "UPS": 30
+            },
+            {
+              "category": "Netmagic",
+              "Cabinets": 7,
+              "CRAC": 6,
+              "Data Panel": 55,
+              "Device": 17,
+              "Floor PDU": 40,
+              "Network": 2,
+              "Power Outlets": 19,
+              "Probe": 35,
+              "Rack PDU": 20,
+              "UPS": 16
+            },
+            {
+              "category": "Site 3",
+              "Cabinets": 3,
+              "CRAC": 2,
+              "Data Panel": 88,
+              "Device": 63,
+              "Floor PDU": 90,
+              "Network": 19,
+              "Power Outlets": 95,
+              "Probe": 74,
+              "Rack PDU": 21,
+              "UPS": 86
+            }
+          ]
+        }
+      );
+    </script>
+    <script>
+      const dataSource = {
+        chart: {
+          caption: "Fan",
+          subcaption: "",
+          numbersuffix: "%",
+          theme: "candy",
+          plottooltext:
+            "$datavalue of $targetDataValue"
+        },
+        colorrange: {
+          color: [
+            {
+              minvalue: "0",
+              maxvalue: "50",
+              code: "#F2726F"
+            },
+            {
+              minvalue: "50",
+              maxvalue: "75",
+              code: "#FFC533"
+            },
+            {
+              minvalue: "75",
+              maxvalue: "100",
+              code: "#62B58F"
+            }
+          ]
+        },
+        value: "60",
+        target: "100"
+      };
+
+      FusionCharts.ready(function () {
+        var myChart = new FusionCharts({
+          type: "hbullet",
+          renderAt: "fanCapacity",
+          width: "100%",
+          height: "100%",
+          dataFormat: "json",
+          dataSource
+        }).render();
+      });
+      const dataSource2 = {
+        chart: {
+          caption: "Cooling",
+          subcaption: "",
+          numbersuffix: "%",
+          theme: "candy",
+          plottooltext:
+            " $datavalue of $targetDataValue"
+        },
+        colorrange: {
+          color: [
+            {
+              minvalue: "0",
+              maxvalue: "50",
+              code: "#F2726F"
+            },
+            {
+              minvalue: "50",
+              maxvalue: "75",
+              code: "#FFC533"
+            },
+            {
+              minvalue: "75",
+              maxvalue: "100",
+              code: "#62B58F"
+            }
+          ]
+        },
+        value: "65",
+        target: "100"
+      };
+
+      FusionCharts.ready(function () {
+        var myChart2 = new FusionCharts({
+          type: "hbullet",
+          renderAt: "coolCapacity",
+          width: "100%",
+          height: "100%",
+          dataFormat: "json",
+          dataSource: dataSource2
+        }).render();
+      });
+
+
+      const dataSource3 = {
+        chart: {
+          caption: "Free Cooling",
+          subcaption: "",
+          numbersuffix: "%",
+          theme: "candy",
+          plottooltext:
+            " $datavalue of $targetDataValue"
+        },
+        colorrange: {
+          color: [
+            {
+              minvalue: "0",
+              maxvalue: "50",
+              code: "#F2726F"
+            },
+            {
+              minvalue: "50",
+              maxvalue: "75",
+              code: "#FFC533"
+            },
+            {
+              minvalue: "75",
+              maxvalue: "100",
+              code: "#62B58F"
+            }
+          ]
+        },
+        value: "3",
+        target: "100"
+      };
+
+      FusionCharts.ready(function () {
+        var myChart2 = new FusionCharts({
+          type: "hbullet",
+          renderAt: "freeCool",
+          width: "100%",
+          height: "100%",
+          dataFormat: "json",
+          dataSource: dataSource3
+        }).render();
+      });
+
+      const dataSource4 = {
+        chart: {
+          caption: "Heating",
+          subcaption: "",
+          numbersuffix: "%",
+          theme: "candy",
+          plottooltext:
+            " $datavalue of $targetDataValue"
+        },
+        colorrange: {
+          color: [
+            {
+              minvalue: "0",
+              maxvalue: "50",
+              code: "#F2726F"
+            },
+            {
+              minvalue: "50",
+              maxvalue: "75",
+              code: "#FFC533"
+            },
+            {
+              minvalue: "75",
+              maxvalue: "100",
+              code: "#62B58F"
+            }
+          ]
+        },
+        value: "0",
+        target: "100"
+      };
+
+      FusionCharts.ready(function () {
+        var myChart2 = new FusionCharts({
+          type: "hbullet",
+          renderAt: "heatingCap",
+          width: "100%",
+          height: "100%",
+          dataFormat: "json",
+          dataSource: dataSource4
+        }).render();
+      });
+    </script>
+  </body>
+
+</html>

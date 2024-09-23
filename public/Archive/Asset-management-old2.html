@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Energy Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link
+      href="vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body id="page-top" class="page-overview sidebar-toggled">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <ul
+        class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled"
+        id="accordionSidebar"
+      >
+        <!-- Sidebar - Brand -->
+        <a
+          class="sidebar-brand d-flex align-items-center justify-content-center"
+          href="overview.html"
+        >
+          <div class="sidebar-brand-icon">
+            <img src="img/KED_logo_PNG-fav.png" alt="logo" />
+          </div>
+          <div class="sidebar-brand-text mx-3">
+            <img src="img/logo.png" alt="logo" />
+          </div>
+        </a>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0" />
+        <!-- Nav Item - Charts -->
+        <li class="nav-item ">
+          <a class="nav-link" href="overview.html">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Overview</span></a>
+        </li>
+        <!-- Nav Item - Dashboard -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="capacity.html">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span> Dashboard</span></a>
+        </li> -->
+        <!-- <li class="nav-item">
+                          <a class="nav-link" href="water.html">
+                            <i class="fas fa-fw fa-table"></i>
+                            <span>Water Meter System</span></a
+                          >
+                        </li> -->
+        <li class="nav-item active">
+          <a class="nav-link" href="Asset-management.html">
+            <i class="fas fa-fw fa-map"></i>
+            <span>Asset Management</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="capacity.html">
+            <i class="fas fa-fw fa-map"></i>
+            <span>Capacity Dashboard</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="floors.html">
+            <i class="fas fa-fw fa-map"></i>
+            <span>Floors Layout</span></a>
+        </li>
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block" />
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+          <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+      </ul>
+      <!-- End of Sidebar -->
+
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+          <!-- Topbar -->
+          <nav
+            class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
+          >
+            <!-- Sidebar Toggle (Topbar) -->
+            <button
+              id="sidebarToggleTop"
+              class="btn btn-link d-md-none rounded-circle mr-3"
+            >
+              <i class="fa fa-bars"></i>
+            </button>
+
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav ml-auto">
+              <div class="topbar-divider d-none d-sm-block"></div>
+
+              <!-- Nav Item - User Information -->
+              <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="#">
+                  <img class="img-scnd-logo" src="img/logo-trid.png" />
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- End of Topbar -->
+
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
+            <!-- Page Heading -->
+            <div
+              class="d-sm-flex align-items-center justify-content-between mb-4"
+            >
+              <h1 class="m-0 font-weight-bold text-primary">
+                <a href="overview.html">Overview</a> /
+                <a href="capacity.html">Dashboard of Mumbai</a> / Asset Management
+                Rack
+              </h1>
+              <!-- <a
+                href="#"
+                class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                ><i class="fas fa-download fa-sm text-white-50"></i> Generate
+                Report</a
+              > -->
+            </div>
+            <label>Filter</label>
+            <select name="location" id="site">
+              <option value="volvo">GPX</option>
+              <option value="saab">Netmagic</option>
+            </select>
+            <br/>
+            <!-- Content Row -->
+            <div class="row">
+              <div class="col-xl-10 col-lg-10">
+                <table
+                  id="AssetTable"
+                  class="table table-striped table-bordered table-sm"
+                  cellspacing="0"
+                  width="100%"
+                >
+                  <thead>
+                    <tr>
+                      <th class="th-sm">Site</th>
+                      <th class="th-sm">Class</th>
+                      <th class="th-sm">Status</th>
+                      <th class="th-sm">Name</th>
+                      <th class="th-sm">Model</th>
+                      <th class="th-sm">Rack</th><th class="th-sm"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>GPX</td>
+                      <td>Rack</td>
+                      <td>Installed</td>
+                      <td>1A</td>
+                      <td>42U-LX</td>
+                      <td>1A</td>
+                      <td><a href="#" class="show">Show <input type="hidden" value="1A" name="id" /></a><a href="#" class="hideTxt">Hide</a></td>
+                    </tr>
+                    <tr>
+                      <td>GPX</td>
+                      <td>Rack</td>
+                      <td>Installed</td>
+                      <td>1B</td>
+                      <td>42U-LX</td>
+                      <td>1B</td><td><a href="#" class="show">Show <input type="hidden" value="1B" name="id" /></a><a href="#" class="hideTxt">Hide</a></td>
+                    </tr>
+                    <tr>
+                      <td>GPX</td>
+                      <td>Rack</td>
+                      <td>Installed</td>
+                      <td>1C</td>
+                      <td>42U-LX</td>
+                      <td>1C</td><td><a href="#" class="show">Show <input type="hidden" value="1C" name="id" /></a><a href="#" class="hideTxt">Hide</a></td>
+                    </tr>
+                    <tr>
+                      <td>Netmagic</td>
+                      <td>Rack</td>
+                      <td>Arcihved</td>
+                      <td>2A</td>
+                      <td>42U-LX</td>
+                      <td>2A</td><td><a href="#" class="show">Show <input type="hidden" value="2A" name="id" /></a><a href="#" class="hideTxt">Hide</a></td>
+                    </tr>
+                    <tr>
+                      <td>Netmagic</td>
+                      <td>Rack</td>
+                      <td>Planned</td>
+                      <td>2B</td>
+                      <td>42U-LX</td>
+                      <td>2B</td><td><a href="#" class="show">Show <input type="hidden" value="2B" name="id" /></a><a href="#" class="hideTxt">Hide</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-xl-2 col-lg-2 elevation">
+                <div class="card shadow mb-4">
+                  <div
+                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between rackTtitle"
+                  >
+                    <h6 class="m-0 font-weight-bold text-primary">
+                      Rack Elevation <span class="rackName"></span>
+                    </h6>
+                    <div class="rackOptions"><span class="rackDetails"><a href="#" title="Details" data-toggle="modal" data-target="#cpacityDetails"><i class="fas fa-fw fa-eye"></i></a></span><span class="rackHealth"><a href="#"  title="Health"  data-toggle="modal" data-target="#healthDetails"><i class="fas fa-fw fa-heartbeat"></i></a></span></div>
+                  </div>
+                  <div class="card-body">
+                    <div id="rackSec"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="cpacityDetails" tabindex="-1" role="dialog" aria-labelledby="cpacityDetailsLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="cpacityDetailsLabel">Inspecting Rack</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row rackTotals">
+                      <div class="col-xl-12 col-lg-12">
+                        <h4 class="detailsTitle">Rack Totals</h4>
+                        <div class="detailsContent">
+                          <table width="100%">
+                            <tr>
+                              <td>Potential Power W</td>
+                              <td>6200</td>
+                            </tr><tr>
+                              <td>Effective Power W</td>
+                              <td>0</td>
+                            </tr><tr>
+                              <td>Heat output BTU/hr</td>
+                              <td>0</td>
+                            </tr><tr>
+                              <td>Total weight lbs</td>
+                              <td>1338</td>
+                            </tr><tr>
+                              <td>items in Rack</td>
+                              <td>37</td>
+                            </tr><tr>
+                              <td>Available RUs</td>
+                              <td>2 of 40</td>
+                            </tr><tr>
+                              <td>Largest contigues RUs</td>
+                              <td>2</td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row rackTotals">
+                      <div class="col-xl-12 col-lg-12">
+                        <h4 class="detailsTitle">Available Ports</h4>
+                        <div class="detailsContent">
+                          <table width="100%">
+                            <tr>
+                              <td>Copper</td>
+                              <td>100/102</td>
+                            </tr><tr>
+                              <td>Fiber</td>
+                              <td>37/37</td>
+                            </tr><tr>
+                              <td>Coax</td>
+                              <td>0/0</td>
+                            </tr><tr>
+                              <td>Power</td>
+                              <td>0/0</td>
+                            </tr>
+                            
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="healthDetails" tabindex="-1" role="dialog" aria-labelledby="healthDetailsLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="healthDetailsLabel">Health Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row rackTotals">
+                      <div class="col-xl-12 col-lg-12">
+                        <h4 class="detailsTitle">Rack</h4>
+                        <div class="detailsContent">
+                          <table width="100%">
+                            <tr>
+                              <td>Power (kW): </td>
+                              <td>6200</td>
+                            </tr>
+                            <tr>
+                              <th colspan="2">Sensors:</th>
+                            </tr>
+                            <tr>
+                              <td>Relativ Humidity 1</td>
+                              <td>22%</td>
+                            </tr>
+                            <tr>
+                              <td>Relativ Humidity 2</td>
+                              <td>31%</td>
+                            </tr>
+                            <tr>
+                              <td>Sensor 1</td>
+                              <td>80°F</td>
+                            </tr>
+                            <tr>
+                              <td>Temperature 1 Test</td>
+                              <td>73°F</td>
+                            </tr>
+                            <tr>
+                              <td>Temperature 2</td>
+                              <td>80°F</td>
+                            </tr>
+                            <tr>
+                              <td>Temperature 3</td>
+                              <td>83°F</td>
+                            </tr>
+                            <tr>
+                              <td>Temperature 4</td>
+                              <td>74°F</td>
+                            </tr>
+                            <tr>
+                              <td>Temperature 5</td>
+                              <td>81°F</td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row rackTotals">
+                      <div class="col-xl-12 col-lg-12">
+                        <h4 class="detailsTitle">Rack PDU 10.34</h4>
+                        <div class="detailsContent">
+                          <table width="100%">
+                            <tr>
+                              <td>Active Power (W):</td>
+                              <td>615.000</td>
+                            </tr>
+                            <tr>
+                              <td>Apparent Power (VA):</td>
+                              <td>685.000</td>
+                            </tr>
+                            <tr>
+                              <td>Inlet Current (A):</td>
+                              <td>2.2</td>
+                            </tr>
+                            <tr>
+                              <th colspan="2">Breakers: </th>
+                            </tr><tr>
+                              <td>Circuite Braker 1 (C1):</td>
+                              <td>0.7 of 19.3</td>
+                            </tr><tr>
+                              <td>Circuite Braker 2 (C2):</td>
+                              <td>0.8 of 19.2</td>
+                            </tr><tr>
+                              <td>Circuite Braker 3 (C3):</td>
+                              <td>1.8 of 18.3</td>
+                            </tr>
+            
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row rackTotals">
+                      <div class="col-xl-12 col-lg-12">
+                        <h4 class="detailsTitle">Rack PDU RPDU-A10</h4>
+                        <div class="detailsContent">
+                          <table width="100%">
+                            <tr>
+                              <td>Active Power (W):</td>
+                              <td>315.000</td>
+                            </tr>
+                            <tr>
+                              <td>Apparent Power (VA):</td>
+                              <td>385.000</td>
+                            </tr>
+                            <tr>
+                              <td>Inlet Current (A):</td>
+                              <td>2.2</td>
+                            </tr>
+                            <tr>
+                              <th colspan="2">Breakers: </th>
+                            </tr>
+                            <tr>
+                              <td>Circuite Braker 1 (C1):</td>
+                              <td>0.7 of 19.3</td>
+                            </tr>
+                            <tr>
+                              <td>Circuite Braker 2 (C2):</td>
+                              <td>0.8 of 19.2</td>
+                            </tr>
+                            <tr>
+                              <td>Circuite Braker 3 (C3):</td>
+                              <td>1.8 of 18.3</td>
+                            </tr>
+                    
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="row">
+              <div class="col-xl-4 col-lg-4">
+                <div class="card shadow mb-4">
+                  <div
+                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
+                  >
+                    <h6 class="m-0 font-weight-bold text-primary">
+                      Monthly Power Generation
+                    </h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="total_gauge"></div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Content Row -->
+          </div>
+          <!-- /.container-fluid -->
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Copyright &copy; Your Website 2020</span>
+            </div>
+          </div>
+        </footer>
+        <!-- End of Footer -->
+      </div>
+      <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button> -->
+    <!-- Resources -->
+    <!-- amCharts javascript sources -->
+    <script
+      type="text/javascript"
+      src="https://www.amcharts.com/lib/3/amcharts.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://www.amcharts.com/lib/3/serial.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://www.amcharts.com/lib/3/themes/dark.js"
+    ></script>
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/geodata/worldLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/dark.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script type="text/JavaScript">
+      var options = {
+            series: [67],
+            chart: {
+            height: 240,
+            type: 'radialBar',
+          },
+          plotOptions: {
+            radialBar: {
+              hollow: {
+                margin: 15,
+                size: '90%',
+              },
+              dataLabels: {
+                name: {
+                  show: true,
+                  color: '#fff'
+                },
+                value: {
+                  show: false,
+                  color: '#fff',
+                  offsetY: 70,
+                  fontSize: '40px'
+                }
+              },
+              track: {
+                background: '#494949',
+                strokeWidth: '67%',
+                margin: 0, // margin is in pixels
+                dropShadow: {
+                    enabled: true,
+                    top: -3,
+                    left: 0,
+                    blur: 4,
+                    opacity: 0.35
+                }
+                }
+            }
+          },
+          fill: {
+            type: 'gradient',
+            gradient: {
+                shade: 'dark',
+                type: 'vertical',
+                gradientToColors: ['#ff00e0'],
+                stops: [0, 100]
+            }
+          },
+          stroke: {
+            lineCap: 'round'
+          },
+            labels: ["67%"],
+                  fontSize: '40px'
+          };
+
+          var chart = new ApexCharts(document.querySelector("#powerConsump"), options);
+          chart.render();
+    </script>
+    <script type="text/JavaScript">
+      $(function(){
+         var hash = $(location).attr('hash').substr(1);
+         $('body').addClass(hash);
+      });
+    </script>
+    <script type="text/JavaScript">
+            $(function () {
+              var hash = $(location).attr('hash').substr(1);
+            // var cars = ["1", "2", "3", "4", "5", "6","7","8", "9", "10"];
+
+      var j;
+            // alert(hash);
+            if(hash == "full"){
+              j = 20;
+            }
+            else if(hash == "aboveAverage"){
+              j= 15;
+            }
+            else if(hash == "average"){
+              j= 10;
+            }
+            else if(hash == "belowAverage"){
+              j= 7;
+            }
+            else if(hash == "below"){
+              j= 3;
+            }
+            else{
+              j=0;
+            }
+            var i;
+            var text = "";
+            for (i = 0; i < j; i++) {
+              text +=
+                "<div class='severRow'><div class='serverList'>Server-" +
+                i +
+                "</div><div class='serverCount'>" +
+                i +
+                "</div></div>";
+            }
+            document.getElementById("serverSec").innerHTML = text;
+            });
+    </script>
+    <!-- amCharts javascript code -->
+    <script type="text/javascript">
+      AmCharts.makeChart("powerConsmp", {
+        type: "serial",
+        categoryField: "date",
+        dataDateFormat: "YYYY-MM-DD HH",
+        processCount: 994,
+        processTimeout: -1,
+        theme: "dark",
+        categoryAxis: {
+          minPeriod: "hh",
+          parseDates: true,
+          minorTickLength: -1,
+        },
+        chartCursor: {
+          enabled: true,
+          categoryBalloonDateFormat: "JJ:NN",
+        },
+        chartScrollbar: {
+          enabled: true,
+        },
+        trendLines: [],
+        graphs: [
+          {
+            bullet: "round",
+            id: "AmGraph-1",
+            title: "Power",
+            valueField: "column-1",
+          },
+          {
+            bullet: "square",
+            id: "AmGraph-2",
+            title: "Power Capacity",
+            valueField: "column-2",
+          },
+          {
+            id: "AmGraph-10",
+            title: "Design Value",
+            valueField: "column-4",
+          },
+          {
+            fixedColumnWidth: -2,
+            id: "AmGraph-12",
+            legendColor: "#FFFF00",
+            negativeLineColor: "#FFFF00",
+            title: "Projected Power",
+            valueField: "column-5",
+          },
+        ],
+        guides: [],
+        valueAxes: [
+          {
+            id: "ValueAxis-1",
+            title: "Power (kW)",
+          },
+        ],
+        allLabels: [],
+        balloon: {},
+        legend: {
+          enabled: true,
+          useGraphSettings: true,
+        },
+        titles: [
+          {
+            id: "Title-1",
+            size: 15,
+            text: "",
+          },
+        ],
+        dataProvider: [
+          {
+            date: "2014-03-01 08",
+            "column-1": "24",
+            "column-2": 21,
+            "column-4": 28,
+            "column-5": 27,
+          },
+          {
+            date: "2014-03-01 09",
+            "column-1": "24.5",
+            "column-2": 19,
+            "column-4": 26,
+            "column-5": 26,
+          },
+          {
+            date: "2014-03-01 10",
+            "column-1": "25",
+            "column-2": 20,
+            "column-4": 28,
+            "column-5": 28,
+          },
+          {
+            date: "2014-03-01 11",
+            "column-1": "24",
+            "column-2": 20,
+            "column-4": 26,
+            "column-5": 26,
+          },
+          {
+            date: "2014-03-01 12",
+            "column-1": "23.5",
+            "column-2": 20,
+            "column-4": 26,
+            "column-5": 27,
+          },
+          {
+            date: "2014-03-01 13",
+            "column-1": "23.8",
+            "column-2": 19,
+            "column-4": 27,
+            "column-5": 28,
+          },
+          {
+            date: "2014-03-01 14",
+            "column-1": "25",
+            "column-2": 19,
+            "column-4": 27,
+            "column-5": 26,
+          },
+        ],
+      });
+
+      AmCharts.makeChart("envConsump", {
+        type: "serial",
+        categoryField: "date",
+        dataDateFormat: "YYYY-MM-DD HH",
+        theme: "dark",
+        categoryAxis: {
+          minPeriod: "hh",
+          parseDates: true,
+        },
+        chartCursor: {
+          enabled: true,
+          categoryBalloonDateFormat: "JJ:NN",
+        },
+        chartScrollbar: {
+          enabled: true,
+        },
+        trendLines: [],
+        graphs: [
+          {
+            bullet: "round",
+            id: "Temperature Front (F)",
+            title: "Temperature Front (F)",
+            valueField: "column-1",
+          },
+          {
+            bullet: "square",
+            id: "Temperature Rear (F)",
+            title: "Temperature Rear (F)",
+            valueField: "column-2",
+          },
+          {
+            id: "Humidity Front (%)",
+            title: "Humidity Front (%)",
+            valueField: "column-3",
+          },
+          {
+            id: "Humidity Rear(%)",
+            title: "Humidity Rear(%)",
+            valueField: "column-4",
+          },
+        ],
+        guides: [],
+        valueAxes: [
+          {
+            id: "ValueAxis-1",
+            title: "Axis title",
+          },
+        ],
+        allLabels: [],
+        balloon: {},
+        legend: {
+          enabled: true,
+          useGraphSettings: true,
+        },
+        titles: [
+          {
+            id: "Title-1",
+            size: 15,
+            text: "",
+          },
+        ],
+        dataProvider: [
+          {
+            date: "2014-03-01 08",
+            "column-1": 82,
+            "column-2": 78,
+            "column-3": 44,
+            "column-4": 40,
+          },
+          {
+            date: "2014-03-01 09",
+            "column-1": 95,
+            "column-2": 80,
+            "column-3": 41,
+            "column-4": 41,
+          },
+          {
+            date: "2014-03-01 10",
+            "column-1": 74,
+            "column-2": 78,
+            "column-3": 42,
+            "column-4": 42,
+          },
+          {
+            date: "2014-03-01 11",
+            "column-1": 87,
+            "column-2": 78,
+            "column-3": 43,
+            "column-4": 43,
+          },
+          {
+            date: "2014-03-01 12",
+            "column-1": 71,
+            "column-2": 85,
+            "column-3": 41,
+            "column-4": 44,
+          },
+          {
+            date: "2014-03-01 13",
+            "column-1": 75,
+            "column-2": 85,
+            "column-3": 42,
+            "column-4": 44,
+          },
+          {
+            date: "2014-03-01 14",
+            "column-1": 73,
+            "column-2": 84,
+            "column-3": 41,
+            "column-4": 44,
+          },
+        ],
+      });
+
+      $(function () {
+          $(".show").on("click", function (e) {
+            e.preventDefault();
+            $(".hideTxt").removeClass("show");
+            $(".show").removeClass("hide");
+            $(this).addClass("hide");
+            $(this).next().addClass("show");
+            var rackName = $(this).find(':hidden').val();
+            $(".elevation").addClass('showRack');
+            // $(this).closest("tr").next().find(".content").slideToggle();
+            $(".rackName").html("-" + rackName);
+            $("#rackSec").load("rack.html");
+          });
+          $(".hideTxt").on("click", function (e) {
+            $(".elevation").removeClass('showRack');
+            $(this).removeClass("show");
+            $(this).prev().removeClass("hide");
+          });
+        });
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+[
+  { "floor": "Building 1", "Consumption": 1169.59, "INR": 1169 },
+  { "floor": "Building 2", "Consumption": 1215.54, "INR": 1091 },
+  { "floor": "Building 3", "Consumption": 1129.21, "INR": 1126 },
+  { "floor": "Building 4", "Consumption": 1241.58, "INR": 1083 },
+  { "floor": "Building 5", "Consumption": 1189.04, "INR": 1091 },
+  { "floor": "Building 6", "Consumption": 1289.84, "INR": 1075 }
+]

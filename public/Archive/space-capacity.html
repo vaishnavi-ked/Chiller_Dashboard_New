@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Energy Dashboard</title>
+        <!-- Custom fonts for this template-->
+        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+            rel="stylesheet" />
+        <!-- Custom styles for this template-->
+        <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+        <link href="css/custom.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body id="page-top" class="page-overview sidebar-toggled">
+        <!-- Page Wrapper -->
+        <div id="wrapper">
+            <!-- Sidebar -->
+            <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled" id="accordionSidebar">
+                <!-- Sidebar - Brand -->
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="overview.html">
+                    <div class="sidebar-brand-icon">
+                        <img src="img/KED_logo_PNG-fav.png" alt="logo" />
+                    </div>
+                    <div class="sidebar-brand-text mx-3">
+                        <img src="img/logo.png" alt="logo" />
+                    </div>
+                </a>
+                <!-- Divider -->
+                <hr class="sidebar-divider my-0" />
+                <!-- Nav Item - Charts -->
+                <li class="nav-item ">
+                    <a class="nav-link" href="overview.html">
+                        <i class="fas fa-fw fa-chart-area"></i>
+                        <span>Overview</span></a>
+                </li>
+                <!-- Nav Item - Dashboard -->
+                <!-- <li class="nav-item active">
+                    <a class="nav-link" href="capacity.html">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span> Dashboard</span></a>
+                </li> -->
+                <!-- <li class="nav-item">
+                                  <a class="nav-link" href="water.html">
+                                    <i class="fas fa-fw fa-table"></i>
+                                    <span>Water Meter System</span></a
+                                  >
+                                </li> -->
+                <li class="nav-item ">
+                    <a class="nav-link" href="Asset-management.html">
+                        <i class="fas fa-fw fa-map"></i>
+                        <span>Asset Management</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="capacity.html">
+                        <i class="fas fa-fw fa-map"></i>
+                        <span>Capacity Dashboard</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="floors.html">
+                        <i class="fas fa-fw fa-map"></i>
+                        <span>Floors Layout</span></a>
+                </li>
+                <!-- Divider -->
+                <hr class="sidebar-divider d-none d-md-block" />
+                <!-- Sidebar Toggler (Sidebar) -->
+                <div class="text-center d-none d-md-inline">
+                    <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                </div>
+            </ul>
+            <!-- End of Sidebar -->
+            <!-- Content Wrapper -->
+            <div id="content-wrapper" class="d-flex flex-column">
+                <!-- Main Content -->
+                <div id="content">
+                    <!-- Topbar -->
+                    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                        <!-- Sidebar Toggle (Topbar) -->
+                        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    
+                        <!-- Topbar Navbar -->
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item dropdown no-arrow">
+                                <a class="nav-link dropdown-toggle" href="Asset-management.html">
+                                    Assets
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown no-arrow active-class">
+                                <a class="nav-link dropdown-toggle" href="space-capacity.html">
+                                    Capacity
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown no-arrow">
+                                <a class="nav-link dropdown-toggle" href="floors.html">
+                                    Floor Visualization
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown no-arrow">
+                                <a class="nav-link dropdown-toggle" href="cooling.html">
+                                    Cooling
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown no-arrow">
+                                <a class="nav-link dropdown-toggle" href="connectivity.html">
+                                    Connectivity
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown no-arrow">
+                                <a class="nav-link dropdown-toggle" href="power-capacity.html">
+                                    Power
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown no-arrow">
+                                <a class="nav-link dropdown-toggle" href="health-capacity.html">
+                                    Health
+                                </a>
+                            </li>
+                            <div class="topbar-divider d-none d-sm-block"></div>
+                        
+                            <!-- Nav Item - User Information -->
+                            <li class="nav-item dropdown no-arrow">
+                                <a class="nav-link dropdown-toggle" href="#">
+                                    <img class="img-scnd-logo" src="img/logo-trid.png" />
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- End of Topbar -->
+                    <!-- Begin Page Content -->
+                    <div class="container-fluid">
+                        <!-- Page Heading -->
+                        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                            <h1 class="m-0 font-weight-bold text-primary">
+                                <a href="overview.html">Overview</a> /
+                                <a href="capacity.html">Dashboard of Mumbai</a> / Space Overview: GPX
+                            </h1>
+                            <!-- <a
+                        href="#"
+                        class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                        ><i class="fas fa-download fa-sm text-white-50"></i> Generate
+                        Report</a
+                        > -->
+                        </div>
+                        <!-- Content Row -->
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-4 ">
+                                <div class="card shadow mb-4">
+                                    <div
+                                        class="card-header py-3 d-flex flex-row align-items-center justify-content-between rackTtitle">
+                                        <h6 class="m-0 font-weight-bold text-primary">
+                                            Cabinet Space Remaining
+                                        </h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="cabSpace"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 ">
+                                <div class="card shadow mb-4">
+                                    <div
+                                        class="card-header py-3 d-flex flex-row align-items-center justify-content-between rackTtitle">
+                                        <h6 class="m-0 font-weight-bold text-primary">
+                                            Floor Space Remaining
+                                        </h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="floorSpace"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4">
+                                <div class="card shadow mb-4">
+                                    <div
+                                        class="card-header py-3 d-flex flex-row align-items-center justify-content-between rackTtitle">
+                                        <h6 class="m-0 font-weight-bold text-primary">
+                                            Rack Units Fragmentation
+                                        </h6>
+                                        <!-- <div class="rackOptions"><span class="rackDetails"><a href="#" title="Details" data-toggle="modal" data-target="#cpacityDetails"><i class="fas fa-fw fa-eye"></i></a></span><span class="rackHealth"><a href="#"  title="Health"  data-toggle="modal" data-target="#healthDetails"><i class="fas fa-fw fa-heartbeat"></i></a></span></div> -->
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="fragmentation"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="card shadow mb-4">
+                                    <div
+                                        class="card-header py-3 d-flex flex-row align-items-center justify-content-between rackTtitle">
+                                        <h6 class="m-0 font-weight-bold text-primary">
+                                            Cabinet Utilization
+                                        </h6>
+                                        <!-- <div class="rackOptions"><span class="rackDetails"><a href="#" title="Details" data-toggle="modal" data-target="#cpacityDetails"><i class="fas fa-fw fa-eye"></i></a></span><span class="rackHealth"><a href="#"  title="Health"  data-toggle="modal" data-target="#healthDetails"><i class="fas fa-fw fa-heartbeat"></i></a></span></div> -->
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="cabUtil"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 ">
+                                <div class="card shadow mb-4">
+                                    <div
+                                        class="card-header py-3 d-flex flex-row align-items-center justify-content-between rackTtitle">
+                                        <h6 class="m-0 font-weight-bold text-primary">
+                                            Rack Unit Space Trend 
+                                        </h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="cabSpace"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <!-- Content Row -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </div>
+                <!-- End of Main Content -->
+                <!-- Footer -->
+                <footer class="sticky-footer bg-white">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Copyright &copy; Your Website 2020</span>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End of Footer -->
+            </div>
+            <!-- End of Content Wrapper -->
+        </div>
+        <!-- End of Page Wrapper -->
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+        <!-- Button trigger modal -->
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+         Launch demo modal
+         </button> -->
+        <!-- Resources -->
+        <!-- amCharts javascript sources -->
+        <script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+        <script type="text/javascript" src="https://www.amcharts.com/lib/3/serial.js"></script>
+        <script type="text/javascript" src="https://www.amcharts.com/lib/3/themes/dark.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/geodata/worldLow.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/themes/dark.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+        <!-- Bootstrap core JavaScript-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Core plugin JavaScript-->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <!-- Custom scripts for all pages-->
+        <script src="js/sb-admin-2.min.js"></script>
+        <!-- Page level plugins -->
+        <script src="vendor/chart.js/Chart.min.js"></script>
+        <!-- Page level custom scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <script type="text/javascript">
+            // Themes begin
+            am4core.useTheme(am4themes_dark);
+            am4core.useTheme(am4themes_animated);
+            // Themes end
+
+            var chartMin = 0;
+            var chartMax = 5000;
+
+
+
+            var data1 = {
+                score: 1500,
+                gradingData: [
+                    {
+                        title: "Rack Units",
+                        color: "#ee1f25",
+                        lowScore: 0,
+                        highScore: 500
+                    },
+                    {
+                        title: "Rack Units",
+                        color: "#f3eb0c",
+                        lowScore: 500,
+                        highScore: 1000
+                    },
+                    {
+                        title: "Rack Units",
+                        color: "#b0d136",
+                        lowScore: 1000,
+                        highScore: 5000
+                    }
+                ]
+            };
+
+            /**
+            Grading Lookup
+            */
+            function lookUpGrade(lookupScore, grades) {
+                // Only change code below this line
+                for (var i = 0; i < grades.length; i++) {
+                    if (
+                        grades[i].lowScore < lookupScore &&
+                        grades[i].highScore >= lookupScore
+                    ) {
+                        return grades[i];
+                    }
+                }
+                return null;
+            }
+
+            // create chart
+            var chart = am4core.create("cabSpace", am4charts.GaugeChart);
+            chart.hiddenState.properties.opacity = 0;
+            chart.fontSize = 11;
+            chart.innerRadius = am4core.percent(80);
+            chart.resizable = true;
+
+            /**
+            * Normal axis
+            */
+
+            var axis = chart.xAxes.push(new am4charts.ValueAxis());
+            axis.min = chartMin;
+            axis.max = chartMax;
+            axis.strictMinMax = true;
+            axis.renderer.radius = am4core.percent(80);
+            axis.renderer.inside = true;
+            axis.renderer.line.strokeOpacity = 0.1;
+            axis.renderer.ticks.template.disabled = false;
+            axis.renderer.ticks.template.strokeOpacity = 1;
+            axis.renderer.ticks.template.strokeWidth = 0.5;
+            axis.renderer.ticks.template.length = 5;
+            axis.renderer.grid.template.disabled = true;
+            axis.renderer.labels.template.radius = am4core.percent(15);
+            axis.renderer.labels.template.fontSize = "0.9em";
+
+            /**
+            * Axis for ranges
+            */
+
+            var axis2 = chart.xAxes.push(new am4charts.ValueAxis());
+            axis2.min = chartMin;
+            axis2.max = chartMax;
+            axis2.strictMinMax = true;
+            axis2.renderer.labels.template.disabled = true;
+            axis2.renderer.ticks.template.disabled = true;
+            axis2.renderer.grid.template.disabled = false;
+            axis2.renderer.grid.template.opacity = 0.5;
+            axis2.renderer.labels.template.bent = true;
+            axis2.renderer.labels.template.fill = am4core.color("#000");
+            axis2.renderer.labels.template.fontWeight = "bold";
+            axis2.renderer.labels.template.fillOpacity = 0.3;
+
+
+
+            /**
+            Ranges
+            */
+
+            for (let grading of data1.gradingData) {
+                var range = axis2.axisRanges.create();
+                range.axisFill.fill = am4core.color(grading.color);
+                range.axisFill.fillOpacity = 0.8;
+                range.axisFill.zIndex = -1;
+                range.value = grading.lowScore > chartMin ? grading.lowScore : chartMin;
+                range.endValue = grading.highScore < chartMax ? grading.highScore : chartMax;
+                range.grid.strokeOpacity = 0;
+                range.stroke = am4core.color(grading.color).lighten(-0.1);
+                range.label.inside = false;
+                range.label.text = grading.title.toUpperCase();
+                range.label.inside = false;
+                range.label.location = 0.5;
+                range.label.inside = false;
+                range.label.radius = am4core.percent(10);
+                range.label.paddingBottom = -5; // ~half font size
+                range.label.fontSize = "0";
+            }
+
+            var matchingGrade = lookUpGrade(data1.score, data1.gradingData);
+
+            /**
+            * Label 1
+            */
+
+            var label = chart.radarContainer.createChild(am4core.Label);
+            label.isMeasured = false;
+            label.fontSize = "6em";
+            label.x = am4core.percent(50);
+            label.paddingBottom = 15;
+            label.horizontalCenter = "middle";
+            label.verticalCenter = "bottom";
+            //label.dataItem = data;
+            label.text = data1.score.toFixed(0);
+            //label.text = "{score}";
+            label.fill = am4core.color(matchingGrade.color);
+
+            /**
+            * Label 2
+            */
+
+            var label2 = chart.radarContainer.createChild(am4core.Label);
+            label2.isMeasured = false;
+            label2.fontSize = "2em";
+            label2.horizontalCenter = "middle";
+            label2.verticalCenter = "bottom";
+            label2.text = matchingGrade.title.toUpperCase();
+            label2.fill = am4core.color(matchingGrade.color);
+
+
+            /**
+            * Hand
+            */
+
+            var hand = chart.hands.push(new am4charts.ClockHand());
+            hand.axis = axis2;
+            hand.innerRadius = am4core.percent(55);
+            hand.startWidth = 8;
+            hand.pin.disabled = true;
+            hand.value = data1.score;
+            hand.fill = am4core.color("#444");
+            hand.stroke = am4core.color("#000");
+
+            hand.events.on("positionchanged", function () {
+                label.text = axis2.positionToValue(hand.currentPosition).toFixed(0);
+                var value2 = axis.positionToValue(hand.currentPosition);
+                var matchingGrade = lookUpGrade(axis.positionToValue(hand.currentPosition), data1.gradingData);
+                label2.text = matchingGrade.title.toUpperCase();
+                label2.fill = am4core.color(matchingGrade.color);
+                label2.stroke = am4core.color(matchingGrade.color);
+                label.fill = am4core.color(matchingGrade.color);
+            })
+
+            setInterval(function () {
+                //var value = chartMin + Math.random() * (chartMax - chartMin);
+                hand.showValue(1500, 1000, am4core.ease.cubicOut);
+            }, 2000);
+        </script>
+        <script type="text/javascript">
+            // Themes begin
+            am4core.useTheme(am4themes_dark);
+            am4core.useTheme(am4themes_animated);
+            // Themes end
+
+            var chartMin = 0;
+            var chartMax = 5000;
+
+
+
+            var data = {
+                score: 1,
+                gradingData: [
+                    {
+                        title: "Cabinet Positions Remaining",
+                        color: "#ee1f25",
+                        lowScore: 0,
+                        highScore: 500
+                    },
+                    {
+                        title: "Cabinet Positions Remaining",
+                        color: "#f3eb0c",
+                        lowScore: 500,
+                        highScore: 1000
+                    },
+                    {
+                        title: "Cabinet Positions Remaining",
+                        color: "#b0d136",
+                        lowScore: 1000,
+                        highScore: 5000
+                    }
+                ]
+            };
+
+            /**
+            Grading Lookup
+             */
+            function lookUpGrade(lookupScore, grades) {
+                // Only change code below this line
+                for (var i = 0; i < grades.length; i++) {
+                    if (
+                        grades[i].lowScore < lookupScore &&
+                        grades[i].highScore >= lookupScore
+                    ) {
+                        return grades[i];
+                    }
+                }
+                return null;
+            }
+
+            // create chart
+            var chart1 = am4core.create("floorSpace", am4charts.GaugeChart);
+            chart1.hiddenState.properties.opacity = 0;
+            chart1.fontSize = 11;
+            chart1.innerRadius = am4core.percent(80);
+            chart1.resizable = true;
+
+            /**
+             * Normal axis
+             */
+
+            var axis01 = chart1.xAxes.push(new am4charts.ValueAxis());
+            axis01.min = chartMin;
+            axis01.max = chartMax;
+            axis01.strictMinMax = true;
+            axis01.renderer.radius = am4core.percent(80);
+            axis01.renderer.inside = true;
+            axis01.renderer.line.strokeOpacity = 0.1;
+            axis01.renderer.ticks.template.disabled = false;
+            axis01.renderer.ticks.template.strokeOpacity = 1;
+            axis01.renderer.ticks.template.strokeWidth = 0.5;
+            axis01.renderer.ticks.template.length = 5;
+            axis01.renderer.grid.template.disabled = true;
+            axis01.renderer.labels.template.radius = am4core.percent(15);
+            axis01.renderer.labels.template.fontSize = "0.9em";
+
+            /**
+             * Axis for ranges
+             */
+
+            var axis02 = chart1.xAxes.push(new am4charts.ValueAxis());
+            axis02.min = chartMin;
+            axis02.max = chartMax;
+            axis02.strictMinMax = true;
+            axis02.renderer.labels.template.disabled = true;
+            axis02.renderer.ticks.template.disabled = true;
+            axis02.renderer.grid.template.disabled = false;
+            axis02.renderer.grid.template.opacity = 0.5;
+            axis02.renderer.labels.template.bent = true;
+            axis02.renderer.labels.template.fill = am4core.color("#000");
+            axis02.renderer.labels.template.fontWeight = "bold";
+            axis02.renderer.labels.template.fillOpacity = 0.3;
+
+
+
+            /**
+            Ranges
+            */
+
+            for (let grading of data.gradingData) {
+                var range = axis02.axisRanges.create();
+                range.axisFill.fill = am4core.color(grading.color);
+                range.axisFill.fillOpacity = 0.8;
+                range.axisFill.zIndex = -1;
+                range.value = grading.lowScore > chartMin ? grading.lowScore : chartMin;
+                range.endValue = grading.highScore < chartMax ? grading.highScore : chartMax;
+                range.grid.strokeOpacity = 0;
+                range.stroke = am4core.color(grading.color).lighten(-0.1);
+                range.label.inside = false;
+                range.label.text = grading.title.toUpperCase();
+                range.label.inside = false;
+                range.label.location = 0.5;
+                range.label.inside = false;
+                range.label.radius = am4core.percent(10);
+                range.label.paddingBottom = -5; // ~half font size
+                range.label.fontSize = "0";
+            }
+
+            var matchingGrade = lookUpGrade(data.score, data.gradingData);
+
+            /**
+             * Label 1
+             */
+
+            var label = chart1.radarContainer.createChild(am4core.Label);
+            label.isMeasured = false;
+            label.fontSize = "6em";
+            label.x = am4core.percent(50);
+            label.paddingBottom = 15;
+            label.horizontalCenter = "middle";
+            label.verticalCenter = "bottom";
+            //label.dataItem = data;
+            label.text = data.score.toFixed(0);
+            //label.text = "{score}";
+            label.fill = am4core.color(matchingGrade.color);
+            label.paddingBottom = -10; // ~half font size
+
+            /**
+             * Label 2
+             */
+
+            var label2 = chart1.radarContainer.createChild(am4core.Label);
+            label2.isMeasured = false;
+            label2.fontSize = "2em";
+            label2.horizontalCenter = "middle";
+            label2.verticalCenter = "bottom";
+            label2.text = matchingGrade.title.toUpperCase();
+            label2.fill = am4core.color(matchingGrade.color);
+            label2.paddingBottom = -300; // ~half font size
+
+
+            /**
+             * Hand
+             */
+
+            var hand2 = chart1.hands.push(new am4charts.ClockHand());
+            hand2.axis = axis02;
+            hand2.innerRadius = am4core.percent(55);
+            hand2.startWidth = 8;
+            hand2.pin.disabled = true;
+            hand2.value = data.score;
+            hand2.fill = am4core.color("#444");
+            hand2.stroke = am4core.color("#000");
+
+            hand2.events.on("positionchanged", function () {
+                label.text = axis02.positionToValue(hand2.currentPosition).toFixed(0);
+                var value2 = axis01.positionToValue(hand2.currentPosition);
+                var matchingGrade = lookUpGrade(axis01.positionToValue(hand2.currentPosition), data.gradingData);
+                label2.text = matchingGrade.title.toUpperCase();
+                label2.fill = am4core.color(matchingGrade.color);
+                label2.stroke = am4core.color(matchingGrade.color);
+                label.fill = am4core.color(matchingGrade.color);
+            })
+
+            setInterval(function () {
+                //var value = chartMin + Math.random() * (chartMax - chartMin);
+                hand2.showValue(600, 1000, am4core.ease.cubicOut);
+            }, 2000);
+        </script>
+        <script>
+            am4core.ready(function () {
+
+                // Themes begin
+                am4core.useTheme(am4themes_animated);
+                // Themes end
+
+                // Create chart instance
+                var chart = am4core.create("fragmentation", am4charts.XYChart);
+                chart.scrollbarX = new am4core.Scrollbar();
+
+                // Add data
+                chart.data = [{
+                    "country": "01",
+                    "visits": 3025
+                }, {
+                    "country": "02",
+                    "visits": 1882
+                }, {
+                    "country": "03",
+                    "visits": 1809
+                }, {
+                    "country": "04",
+                    "visits": 1322
+                }, {
+                    "country": "05",
+                    "visits": 1122
+                }, {
+                    "country": "06",
+                    "visits": 1114
+                }, {
+                    "country": "07",
+                    "visits": 984
+                }];
+
+                // Create axes
+                var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+                categoryAxis.dataFields.category = "country";
+                categoryAxis.renderer.grid.template.location = 0;
+                categoryAxis.renderer.minGridDistance = 30;
+                categoryAxis.renderer.labels.template.horizontalCenter = "right";
+                categoryAxis.renderer.labels.template.verticalCenter = "middle";
+                categoryAxis.renderer.labels.template.rotation = 270;
+                categoryAxis.tooltip.disabled = true;
+                categoryAxis.renderer.minHeight = 110;
+
+                var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+                valueAxis.renderer.minWidth = 50;
+                valueAxis.title.text = "Potential New Items";
+                valueAxis.title.fontWeight = 800;
+                var valueAxis2 = chart.xAxes.push(new am4charts.ValueAxis());
+                valueAxis2.title.text = "Rack Unit Size";
+                valueAxis2.title.fontWeight = 800;
+
+                // Create series
+                var series = chart.series.push(new am4charts.ColumnSeries());
+                series.sequencedInterpolation = true;
+                series.dataFields.valueY = "visits";
+                series.dataFields.categoryX = "country";
+                series.tooltipText = "[{categoryX}: bold]{valueY}[/]";
+                series.columns.template.strokeWidth = 0;
+
+                series.tooltip.pointerOrientation = "vertical";
+
+                series.columns.template.column.cornerRadiusTopLeft = 10;
+                series.columns.template.column.cornerRadiusTopRight = 10;
+                series.columns.template.column.fillOpacity = 0.8;
+
+                // on hover, make corner radiuses bigger
+                var hoverState = series.columns.template.column.states.create("hover");
+                hoverState.properties.cornerRadiusTopLeft = 0;
+                hoverState.properties.cornerRadiusTopRight = 0;
+                hoverState.properties.fillOpacity = 1;
+
+                series.columns.template.adapter.add("fill", function (fill, target) {
+                    return chart.colors.getIndex(target.dataItem.index);
+                });
+
+                // Cursor
+                chart.cursor = new am4charts.XYCursor();
+
+            }); // end am4core.ready()
+        </script>
+    </body>
+
+</html>

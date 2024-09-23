@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Energy Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link
+      href="vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body id="page-top" class="page-overview sidebar-toggled">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <ul
+        class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled"
+        id="accordionSidebar"
+      >
+        <!-- Sidebar - Brand -->
+        <a
+          class="sidebar-brand d-flex align-items-center justify-content-center"
+          href="overview.html"
+        >
+          <div class="sidebar-brand-icon">
+            <img src="img/KED_logo_PNG-fav.png" alt="logo" />
+          </div>
+          <div class="sidebar-brand-text mx-3">
+            <img src="img/logo.png" alt="logo" />
+          </div>
+        </a>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0" />
+        <!-- Nav Item - Charts -->
+        <li class="nav-item">
+          <a class="nav-link" href="overview.html">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Overview</span></a
+          >
+        </li>
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item">
+          <a class="nav-link" href="capacity.html">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span> Energy Dashboard</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="water.html">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Water Meter System</span></a
+          >
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="Asset-management.html">
+            <i class="fas fa-fw fa-map"></i>
+            <span>Asset Management</span></a
+          >
+        </li>
+        <!-- Divider -->
+        <hr class="sidebar-divider" />
+
+        <!-- Heading -->
+        <!-- <div class="sidebar-heading">Interface</div> -->
+
+        <!-- Divider -->
+        <!-- <hr class="sidebar-divider" /> -->
+
+        <!-- Heading -->
+        <!-- <div class="sidebar-heading">Addons</div> -->
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+          <a
+            class="nav-link collapsed"
+            href="#"
+            data-toggle="collapse"
+            data-target="#collapsePages"
+            aria-expanded="true"
+            aria-controls="collapsePages"
+          >
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Pages</span>
+          </a>
+          <!-- <div
+            id="collapsePages"
+            class="collapse"
+            aria-labelledby="headingPages"
+            data-parent="#accordionSidebar"
+          >
+            <div class="bg-white py-2 collapse-inner rounded">
+              <h6 class="collapse-header">Login Screens:</h6>
+              <a class="collapse-item" href="login.html">Login</a>
+              <a class="collapse-item" href="register.html">Register</a>
+              <a class="collapse-item" href="forgot-password.html"
+                >Forgot Password</a
+              >
+              <div class="collapse-divider"></div>
+              <h6 class="collapse-header">Other Pages:</h6>
+              <a class="collapse-item" href="404.html">404 Page</a>
+              <a class="collapse-item" href="blank.html">Blank Page</a>
+            </div>
+          </div> -->
+        </li>
+
+        <!-- Nav Item - Tables -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Water</span></a
+          >
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block" />
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+          <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+      </ul>
+      <!-- End of Sidebar -->
+
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+          <!-- Topbar -->
+          <nav
+            class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
+          >
+            <!-- Sidebar Toggle (Topbar) -->
+            <button
+              id="sidebarToggleTop"
+              class="btn btn-link d-md-none rounded-circle mr-3"
+            >
+              <i class="fa fa-bars"></i>
+            </button>
+
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav ml-auto">
+              <div class="topbar-divider d-none d-sm-block"></div>
+
+              <!-- Nav Item - User Information -->
+              <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="#">
+                  <img class="img-scnd-logo" src="img/logo-trid.png" />
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- End of Topbar -->
+
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
+            <!-- Page Heading -->
+            <div
+              class="d-sm-flex align-items-center justify-content-between mb-4"
+            >
+              <h1 class="m-0 font-weight-bold text-primary">
+                <a href="overview.html">Overview</a> /
+                <a href="capacity.html">Dashboard of Mumbai</a> / Asset Management
+                Rack
+              </h1>
+              <!-- <a
+                href="#"
+                class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                ><i class="fas fa-download fa-sm text-white-50"></i> Generate
+                Report</a
+              > -->
+            </div>
+
+            <!-- Content Row -->
+            <div class="row">
+              <div class="col-xl-3 col-lg-3">
+                <div class="card shadow mb-4">
+                  <div
+                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
+                  >
+                    <h6 class="m-0 font-weight-bold text-primary">
+                      Rack Elevation
+                    </h6>
+                  </div>
+                  <div class="card-body">
+                    <div class="serverRak">
+                      <div id="cabin">
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">40</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">39</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">38</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">37</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">36</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">35</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">34</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">33</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">32</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">31</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">30</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">29</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">28</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">27</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">26</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">25</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">24</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">23</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">22</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">21</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">20</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">19</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">18</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">17</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">16</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">15</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">14</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">13</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">12</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">11</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">10</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">9</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">8</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">7</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">6</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">5</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">4</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">3</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">2</span>
+                        </div>
+                        <div class="cabinSlot">
+                          <span class="slotContent"></span
+                          ><span class="rowNmbr">1</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-3">
+                <div class="card shadow mb-4">
+                  <div
+                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
+                  >
+                    <h6 class="m-0 font-weight-bold text-primary">Summary</h6>
+                  </div>
+                  <div class="card-body">
+                    <div class="serverRak">
+                      <table id="property">
+                        <tr>
+                          <td>Status :</td>
+                          <td class="txt-orangered">Warning</td>
+                        </tr>
+                        <tr>
+                          <td>State :</td>
+                          <td>Active</td>
+                        </tr>
+                        <tr>
+                          <td>Health Score</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td colspan="2"><div id="powerConsump"></div></td>
+                        </tr>
+                        <tr>
+                          <td>Model :</td>
+                          <td>OM-5103</td>
+                        </tr>
+                        <tr>
+                          <td>IP Address :</td>
+                          <td>10.0.8.33</td>
+                        </tr>
+                        <tr>
+                          <td>Location :</td>
+                          <td>Mumbai</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="card shadow mb-4">
+                  <div
+                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
+                  >
+                    <h6 class="m-0 font-weight-bold text-primary">Power</h6>
+                  </div>
+                  <div class="card-body">
+                    <!-- <table id="property">
+                      <tr>
+                        <th>Capacity</th>
+                        <th></th>
+                      </tr>
+                      <tr>
+                        <td>Total :</td>
+                        <td>25.4 kW **</td>
+                      </tr>
+                      <tr class="bb1">
+                        <td>Warning Threshold:</td>
+                        <td>25.4 kW **</td>
+                      </tr>
+                      <tr class="emptyRow"></tr>
+                      <tr>
+                        <th>Total</th>
+                        <th></th>
+                      </tr>
+                      <tr>
+                        <td>Load :</td>
+                        <td>19% *</td>
+                      </tr>
+                      <tr>
+                        <td>Average Load :</td>
+                        <td>19% *</td>
+                      </tr>
+                      <tr>
+                        <td>Power :</td>
+                        <td>5.0 kW</td>
+                      </tr>
+                      <tr class="bb1">
+                        <td>Average Power :</td>
+                        <td>4.9 kW</td>
+                      </tr>
+                      <tr class="emptyRow"></tr>
+                      <tr>
+                        <th>Phase 1</th>
+                        <th></th>
+                      </tr>
+                      <tr>
+                        <td>Current :</td>
+                        <td>15.9 A</td>
+                      </tr>
+                      <tr>
+                        <td>Average Current :</td>
+                        <td>15.7 A</td>
+                      </tr>
+                      <tr>
+                        <td>Voltage :</td>
+                        <td>120 V</td>
+                      </tr>
+                      <tr>
+                        <td>Power :</td>
+                        <td>1.7 kW</td>
+                      </tr>
+                      <tr class="bb1">
+                        <td>Average Power :</td>
+                        <td>1.7 kW</td>
+                      </tr>
+                      <tr class="emptyRow"></tr>
+                      <tr>
+                        <th>Phase 2</th>
+                        <th></th>
+                      </tr>
+                      <tr>
+                        <td>Current :</td>
+                        <td>15.9 A</td>
+                      </tr>
+                      <tr>
+                        <td>Average Current :</td>
+                        <td>15.7 A</td>
+                      </tr>
+                      <tr>
+                        <td>Voltage :</td>
+                        <td>120 V</td>
+                      </tr>
+                      <tr>
+                        <td>Power :</td>
+                        <td>1.7 kW</td>
+                      </tr>
+                      <tr>
+                        <td>Average Power :</td>
+                        <td>1.7 kW</td>
+                      </tr>
+                    </table> -->
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6">
+                <div class="card shadow mb-4">
+                  <div
+                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
+                  >
+                    <h6 class="m-0 font-weight-bold text-primary">
+                      Power - Last Day
+                    </h6>
+                  </div>
+                  <div class="card-body">
+                    <div
+                      id="powerConsmp"
+                      style="
+                        width: 100%;
+                        height: 400px;
+                        background-color: #282828;
+                      "
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="card shadow mb-4">
+                  <div
+                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
+                  >
+                    <h6 class="m-0 font-weight-bold text-primary">
+                      Environment - Last Day
+                    </h6>
+                  </div>
+                  <div class="card-body">
+                    <div
+                      id="envConsump"
+                      style="
+                        width: 100%;
+                        height: 400px;
+                        background-color: #282828;
+                      "
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mg-top-50">
+              <div class="col-xl-2 col-lg-2"></div>
+
+              <!-- JJ -->
+              <div class="shadow-wrapper">
+                <div class="shadowBox">
+                  <div>&nbsp;</div>
+                </div>
+              </div>
+              <div class="box-wrapper">
+                <div class="box-faces">
+                  <div class="box-face box-face--is-front">
+                    <p>
+                      <i class="icon-rocket icon-4x"></i>
+                    </p>
+                  </div>
+                  <div class="box-face box-face--is-back">
+                    <p>
+                      <i class="icon-rocket icon-4x"></i>
+                    </p>
+                  </div>
+                  <div class="box-face box-face--is-top">&nbsp;</div>
+                  <div class="box-face box-face--is-server1 server">&nbsp;</div>
+                  <div class="box-face box-face--is-server2 server">&nbsp;</div>
+                  <div class="box-face box-face--is-server3 server">&nbsp;</div>
+                  <div class="box-face box-face--is-server4 server">&nbsp;</div>
+                  <div class="box-face box-face--is-server5 server">&nbsp;</div>
+                  <div class="box-face box-face--is-server6 server">&nbsp;</div>
+                  <div class="box-face box-face--is-server7 server">&nbsp;</div>
+                  <div class="box-face box-face--is-bottom">&nbsp;</div>
+                  <div class="box-face box-face--is-left">
+                    <p>
+                      <i class="icon-rocket icon-4x"></i>
+                    </p>
+                  </div>
+                  <div class="box-face box-face--is-right">
+                    <p>
+                      <i class="icon-rocket icon-4x"></i>
+                    </p>
+                  </div>
+                </div>
+                <!-- end of .box -->
+              </div>
+              <!-- end of .box-wrapper -->
+              <!-- SDG -->
+            </div>
+            <!-- <div class="row">
+              <div class="col-xl-4 col-lg-4">
+                <div class="card shadow mb-4">
+                  <div
+                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
+                  >
+                    <h6 class="m-0 font-weight-bold text-primary">
+                      Monthly Power Generation
+                    </h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="total_gauge"></div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Content Row -->
+          </div>
+          <!-- /.container-fluid -->
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Copyright &copy; Your Website 2020</span>
+            </div>
+          </div>
+        </footer>
+        <!-- End of Footer -->
+      </div>
+      <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div
+      class="modal fade"
+      id="logoutModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button
+              class="close"
+              type="button"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Select "Logout" below if you are ready to end your current session.
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-secondary"
+              type="button"
+              data-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <a class="btn btn-primary" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Resources -->
+    <!-- amCharts javascript sources -->
+    <script
+      type="text/javascript"
+      src="https://www.amcharts.com/lib/3/amcharts.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://www.amcharts.com/lib/3/serial.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://www.amcharts.com/lib/3/themes/dark.js"
+    ></script>
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/geodata/worldLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/dark.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script type="text/JavaScript">
+      var options = {
+            series: [67],
+            chart: {
+            height: 240,
+            type: 'radialBar',
+          },
+          plotOptions: {
+            radialBar: {
+              hollow: {
+                margin: 15,
+                size: '90%',
+              },
+              dataLabels: {
+                name: {
+                  show: true,
+                  color: '#fff'
+                },
+                value: {
+                  show: false,
+                  color: '#fff',
+                  offsetY: 70,
+                  fontSize: '40px'
+                }
+              },
+              track: {
+                background: '#494949',
+                strokeWidth: '67%',
+                margin: 0, // margin is in pixels
+                dropShadow: {
+                    enabled: true,
+                    top: -3,
+                    left: 0,
+                    blur: 4,
+                    opacity: 0.35
+                }
+                }
+            }
+          },
+          fill: {
+            type: 'gradient',
+            gradient: {
+                shade: 'dark',
+                type: 'vertical',
+                gradientToColors: ['#ff00e0'],
+                stops: [0, 100]
+            }
+          },
+          stroke: {
+            lineCap: 'round'
+          },
+            labels: ["67%"],
+                  fontSize: '40px'
+          };
+
+          var chart = new ApexCharts(document.querySelector("#powerConsump"), options);
+          chart.render();
+    </script>
+    <script type="text/JavaScript">
+      $(function(){
+         var hash = $(location).attr('hash').substr(1);
+         $('body').addClass(hash);
+      });
+    </script>
+    <script type="text/JavaScript">
+            $(function () {
+              var hash = $(location).attr('hash').substr(1);
+            // var cars = ["1", "2", "3", "4", "5", "6","7","8", "9", "10"];
+
+      var j;
+            // alert(hash);
+            if(hash == "full"){
+              j = 20;
+            }
+            else if(hash == "aboveAverage"){
+              j= 15;
+            }
+            else if(hash == "average"){
+              j= 10;
+            }
+            else if(hash == "belowAverage"){
+              j= 7;
+            }
+            else if(hash == "below"){
+              j= 3;
+            }
+            else{
+              j=0;
+            }
+            var i;
+            var text = "";
+            for (i = 0; i < j; i++) {
+              text +=
+                "<div class='severRow'><div class='serverList'>Server-" +
+                i +
+                "</div><div class='serverCount'>" +
+                i +
+                "</div></div>";
+            }
+            document.getElementById("serverSec").innerHTML = text;
+            });
+    </script>
+    <!-- amCharts javascript code -->
+    <script type="text/javascript">
+      AmCharts.makeChart("powerConsmp", {
+        type: "serial",
+        categoryField: "date",
+        dataDateFormat: "YYYY-MM-DD HH",
+        processCount: 994,
+        processTimeout: -1,
+        theme: "dark",
+        categoryAxis: {
+          minPeriod: "hh",
+          parseDates: true,
+          minorTickLength: -1,
+        },
+        chartCursor: {
+          enabled: true,
+          categoryBalloonDateFormat: "JJ:NN",
+        },
+        chartScrollbar: {
+          enabled: true,
+        },
+        trendLines: [],
+        graphs: [
+          {
+            bullet: "round",
+            id: "AmGraph-1",
+            title: "Power",
+            valueField: "column-1",
+          },
+          {
+            bullet: "square",
+            id: "AmGraph-2",
+            title: "Power Capacity",
+            valueField: "column-2",
+          },
+          {
+            id: "AmGraph-10",
+            title: "Design Value",
+            valueField: "column-4",
+          },
+          {
+            fixedColumnWidth: -2,
+            id: "AmGraph-12",
+            legendColor: "#FFFF00",
+            negativeLineColor: "#FFFF00",
+            title: "Projected Power",
+            valueField: "column-5",
+          },
+        ],
+        guides: [],
+        valueAxes: [
+          {
+            id: "ValueAxis-1",
+            title: "Power (kW)",
+          },
+        ],
+        allLabels: [],
+        balloon: {},
+        legend: {
+          enabled: true,
+          useGraphSettings: true,
+        },
+        titles: [
+          {
+            id: "Title-1",
+            size: 15,
+            text: "",
+          },
+        ],
+        dataProvider: [
+          {
+            date: "2014-03-01 08",
+            "column-1": "24",
+            "column-2": 21,
+            "column-4": 28,
+            "column-5": 27,
+          },
+          {
+            date: "2014-03-01 09",
+            "column-1": "24.5",
+            "column-2": 19,
+            "column-4": 26,
+            "column-5": 26,
+          },
+          {
+            date: "2014-03-01 10",
+            "column-1": "25",
+            "column-2": 20,
+            "column-4": 28,
+            "column-5": 28,
+          },
+          {
+            date: "2014-03-01 11",
+            "column-1": "24",
+            "column-2": 20,
+            "column-4": 26,
+            "column-5": 26,
+          },
+          {
+            date: "2014-03-01 12",
+            "column-1": "23.5",
+            "column-2": 20,
+            "column-4": 26,
+            "column-5": 27,
+          },
+          {
+            date: "2014-03-01 13",
+            "column-1": "23.8",
+            "column-2": 19,
+            "column-4": 27,
+            "column-5": 28,
+          },
+          {
+            date: "2014-03-01 14",
+            "column-1": "25",
+            "column-2": 19,
+            "column-4": 27,
+            "column-5": 26,
+          },
+        ],
+      });
+
+      AmCharts.makeChart("envConsump", {
+        type: "serial",
+        categoryField: "date",
+        dataDateFormat: "YYYY-MM-DD HH",
+        theme: "dark",
+        categoryAxis: {
+          minPeriod: "hh",
+          parseDates: true,
+        },
+        chartCursor: {
+          enabled: true,
+          categoryBalloonDateFormat: "JJ:NN",
+        },
+        chartScrollbar: {
+          enabled: true,
+        },
+        trendLines: [],
+        graphs: [
+          {
+            bullet: "round",
+            id: "Temperature Front (F)",
+            title: "Temperature Front (F)",
+            valueField: "column-1",
+          },
+          {
+            bullet: "square",
+            id: "Temperature Rear (F)",
+            title: "Temperature Rear (F)",
+            valueField: "column-2",
+          },
+          {
+            id: "Humidity Front (%)",
+            title: "Humidity Front (%)",
+            valueField: "column-3",
+          },
+          {
+            id: "Humidity Rear(%)",
+            title: "Humidity Rear(%)",
+            valueField: "column-4",
+          },
+        ],
+        guides: [],
+        valueAxes: [
+          {
+            id: "ValueAxis-1",
+            title: "Axis title",
+          },
+        ],
+        allLabels: [],
+        balloon: {},
+        legend: {
+          enabled: true,
+          useGraphSettings: true,
+        },
+        titles: [
+          {
+            id: "Title-1",
+            size: 15,
+            text: "",
+          },
+        ],
+        dataProvider: [
+          {
+            date: "2014-03-01 08",
+            "column-1": 82,
+            "column-2": 78,
+            "column-3": 44,
+            "column-4": 40,
+          },
+          {
+            date: "2014-03-01 09",
+            "column-1": 95,
+            "column-2": 80,
+            "column-3": 41,
+            "column-4": 41,
+          },
+          {
+            date: "2014-03-01 10",
+            "column-1": 74,
+            "column-2": 78,
+            "column-3": 42,
+            "column-4": 42,
+          },
+          {
+            date: "2014-03-01 11",
+            "column-1": 87,
+            "column-2": 78,
+            "column-3": 43,
+            "column-4": 43,
+          },
+          {
+            date: "2014-03-01 12",
+            "column-1": 71,
+            "column-2": 85,
+            "column-3": 41,
+            "column-4": 44,
+          },
+          {
+            date: "2014-03-01 13",
+            "column-1": 75,
+            "column-2": 85,
+            "column-3": 42,
+            "column-4": 44,
+          },
+          {
+            date: "2014-03-01 14",
+            "column-1": 73,
+            "column-2": 84,
+            "column-3": 41,
+            "column-4": 44,
+          },
+        ],
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,2289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Energy Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link
+      href="vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="fonts/Poppins/stylesheet.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body id="page-top" class="page-overview sidebar-toggled">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <ul
+        class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled"
+        id="accordionSidebar"
+      >
+        <!-- Sidebar - Brand -->
+        <a
+          class="sidebar-brand d-flex align-items-center justify-content-center"
+          href="overview.html"
+        >
+          <div class="sidebar-brand-icon">
+            <img src="img/KED_logo_PNG-fav.png" alt="logo" />
+          </div>
+          <div class="sidebar-brand-text mx-3">
+            <img src="img/logo.png" alt="logo" />
+          </div>
+        </a>
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0" />
+        <!-- Nav Item - Charts -->
+        <!-- <li class="nav-item ">
+          <a class="nav-link" href="overview.html">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Overview</span></a>
+        </li> -->
+        <!-- Nav Item - Dashboard -->
+
+        <li class="nav-item">
+          <a class="nav-link" href="overview.html">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Overview</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Asset-management.html">
+            <i class="fas fa-fw fa-map"></i>
+            <span>Asset Management</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="capacity.html">
+            <i class="fas fa-fw fa-map"></i>
+            <span>Capacity Dashboard</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="buildings.html">
+            <i class="fas fa-fw fa-map"></i>
+            <span>Buildings</span></a
+          >
+        </li>
+        <li class="nav-item dropdown no-arrow">
+          <a class="nav-link dropdown-toggle" href="cooling.html">
+            <i class="fas fa-fw fa-map"></i>
+            <span>Cooling</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown no-arrow">
+          <a class="nav-link dropdown-toggle" href="connectivity.html">
+            <i class="fas fa-fw fa-map"></i>
+            <span>Connectivity</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown no-arrow">
+          <a class="nav-link dropdown-toggle" href="power-capacity.html">
+            <i class="fas fa-fw fa-map"></i>
+            <span>Power</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown no-arrow">
+          <a class="nav-link dropdown-toggle" href="health-capacity.html">
+            <i class="fas fa-fw fa-map"></i>
+            <span>Health</span>
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Energy Dashboard</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="water.html">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Water Meter System</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="dashboard1.html">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span> Cold Room Temp</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="dashboard-FAS.html">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Fire Alarm System</span>
+          </a>
+        </li>
+        <!-- <li class="nav-item ">
+          <a class="nav-link" href="Asset-management.html">
+            <i class="fas fa-fw fa-map"></i>
+            <span>Asset Management</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="capacity.html">
+            <i class="fas fa-fw fa-map"></i>
+            <span>Capacity Dashboard</span></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="buildings.html">
+            <i class="fas fa-fw fa-map"></i>
+            <span>Buildings</span></a>
+        </li>
+        <li class="nav-item dropdown no-arrow">
+          <a class="nav-link dropdown-toggle" href="cooling.html">
+            <i class="fas fa-fw fa-map"></i>
+            <span>Cooling</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown no-arrow">
+          <a class="nav-link dropdown-toggle" href="connectivity.html">
+            <i class="fas fa-fw fa-map"></i>
+            <span>Connectivity</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown no-arrow">
+          <a class="nav-link dropdown-toggle" href="power-capacity.html">
+            <i class="fas fa-fw fa-map"></i>
+            <span>Power</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown no-arrow">
+          <a class="nav-link dropdown-toggle" href="health-capacity.html">
+            <i class="fas fa-fw fa-map"></i>
+            <span>Health</span>
+          </a>
+        </li> -->
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block" />
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+          <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+      </ul>
+      <!-- End of Sidebar -->
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+          <!-- Topbar -->
+          <nav
+            class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
+          >
+            <!-- Sidebar Toggle (Topbar) -->
+            <button
+              id="sidebarToggleTop"
+              class="btn btn-link d-md-none rounded-circle mr-3"
+            >
+              <i class="fa fa-bars"></i>
+            </button>
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item dropdown no-arrow mx-1">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="alertsDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-bell fa-fw"></i>
+                  <!-- Counter - Alerts -->
+                  <span class="badge badge-danger badge-counter">3+</span>
+                </a>
+                <!-- Dropdown - Alerts -->
+                <div
+                  class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                  aria-labelledby="alertsDropdown"
+                >
+                  <h6 class="dropdown-header">Alerts Center</h6>
+                  <a
+                    class="dropdown-item d-flex align-items-center"
+                    href="server.html"
+                  >
+                    <div class="mr-3">
+                      <div class="icon-circle bg-primary">
+                        <i class="fas fa-file-alt text-white"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="small text-gray-500">November 4, 2020</div>
+                      <span class="font-weight-bold">Server issue</span>
+                    </div>
+                  </a>
+                  <a
+                    class="dropdown-item d-flex align-items-center"
+                    href="cabin.html"
+                  >
+                    <div class="mr-3">
+                      <div class="icon-circle bg-warning">
+                        <i class="fas fa-exclamation-triangle text-white"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="small text-gray-500">November 4, 2020</div>
+                      Rack Temperature is High
+                    </div>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="mr-3">
+                      <div class="icon-circle bg-warning">
+                        <i class="fas fa-exclamation-triangle text-white"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="small text-gray-500">November 3, 2020</div>
+                      Warning: Switchboard - Generator Group
+                    </div>
+                  </a>
+                  <a
+                    class="dropdown-item text-center small text-gray-500"
+                    href="alarm-management.html"
+                    >Show All Alerts</a
+                  >
+                </div>
+              </li>
+              <div class="topbar-divider d-none d-sm-block"></div>
+
+              <!-- Nav Item - User Information -->
+              <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="#">
+                  <img class="img-scnd-logo" src="img/logo-trid.png" />
+                </a>
+              </li>
+              <div class="topbar-divider d-none d-sm-block"></div>
+
+              <li class="nav-item dropdown no-arrow">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="userDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <span class="mr-2 d-none d-lg-inline text-gray-600 small"
+                    >Supervisor</span
+                  >
+                  <img
+                    class="img-profile rounded-circle"
+                    src="https://source.unsplash.com/QAB-WJcbgJk/60x60"
+                  />
+                </a>
+                <!-- Dropdown - User Information -->
+                <div
+                  class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                  aria-labelledby="userDropdown"
+                >
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Profile
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Settings
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Activity Log
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-toggle="modal"
+                    data-target="#logoutModal"
+                  >
+                    <i
+                      class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"
+                    ></i>
+                    Logout
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <!-- End of Topbar -->
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
+            <!-- Page Heading -->
+            <div
+              class="d-sm-flex align-items-center justify-content-between mb-4"
+            >
+              <h1 class="m-0 font-weight-bold text-primary">
+                <a href="overview.html">Overview</a> / Overall Energy Dashboard
+              </h1>
+              <!-- <h1 class="m-0 font-weight-bold text-primary">
+                Energy Dashboard <span id="locationName"></span>
+              </h1> -->
+              <!-- <a
+                href="#"
+                class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                ><i class="fas fa-download fa-sm text-white-50"></i> Generate
+                Report</a
+              > -->
+
+              <select id="SelectBuild" onchange="buildHandler(this.value)">
+                <option value="index" selected>Overall Building</option>
+
+                <option value="energy">Building 1</option>
+                <option value="energy">Building 2</option>
+                <option value="energy">Building 3</option>
+                <option value="energy">Building 4</option>
+                <option value="energy">Building 5</option>
+                <option value="energy">Building 6</option>
+              </select>
+            </div>
+
+            <!-- Content Row -->
+            <div class="row">
+              <div class="col-xl-12 col-lg-5 small-boxes">
+                <!-- Earnings (Monthly) Card Example -->
+                <div class="row">
+                  <div class="col-xl-3 col-md-4 mb-4">
+                    <div class="card border-left-success shadow h-100 py-2">
+                      <div class="card-body VrtCenter">
+                        <div class="row no-gutters align-items-center">
+                          <div class="col mr-2">
+                            <div
+                              class="text-xs font-weight-bold text-primary text-uppercase mb-1"
+                            >
+                              Overall Facility PUE
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                              2.1
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <i class="fas fa-bolt fa-2x text-gray-300"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-md-4 mb-4">
+                    <div class="card border-left-primary shadow h-100 py-2">
+                      <div class="card-body VrtCenter">
+                        <div class="row no-gutters align-items-center">
+                          <div class="col mr-2">
+                            <div
+                              class="text-xs font-weight-bold text-primary text-uppercase mb-1"
+                            >
+                              Total Energy Consumption
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                              161893 kWH
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <i
+                              class="fas fa-battery-half fa-2x text-gray-300"
+                            ></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-md-4 mb-4">
+                    <div class="card border-left-warning shadow h-100 py-2">
+                      <div class="card-body VrtCenter">
+                        <div class="row no-gutters align-items-center">
+                          <div class="col mr-2">
+                            <div
+                              class="text-xs font-weight-bold text-primary text-uppercase mb-1"
+                            >
+                              Current Energy Consumption
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                              180.2 kWh
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <i
+                              class="fas fa-chart-line fa-2x text-gray-300"
+                            ></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Pending Requests Card Example -->
+                  <div class="col-xl-3 col-md-4 mb-4">
+                    <div class="card border-left-light shadow h-100 py-2">
+                      <div class="card-body VrtCenter">
+                        <div class="row no-gutters align-items-center">
+                          <div class="col mr-2">
+                            <div
+                              class="text-xs font-weight-bold text-primary text-uppercase mb-1"
+                            >
+                              Tonnes of CO2
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                              210.3
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <i
+                              class="fas fa-hand-holding-heart fa-2x text-gray-300"
+                            ></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <!-- Area Chart -->
+              <div class="col-xl-7 col-lg-7">
+                <div class="card shadow mb-4">
+                  <!-- Card Header - Dropdown -->
+                  <div
+                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
+                  >
+                    <h6 class="m-0 font-weight-bold text-primary">
+                      Comparison of Energy Consumption
+                    </h6>
+                    <!-- <div class="dropdown no-arrow">
+                      <a
+                        class="dropdown-toggle"
+                        href="#"
+                        role="button"
+                        id="dropdownMenuLink"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <i
+                          class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"
+                        ></i>
+                      </a>
+                      <div
+                        class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                        aria-labelledby="dropdownMenuLink"
+                      >
+                        <div class="dropdown-header">Dropdown Header:</div>
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
+                      </div>
+                    </div> -->
+                  </div>
+                  <!-- Card Body -->
+                  <div class="card-body">
+                    <div class="chart-area">
+                      <div id="chartdiv"></div>
+                      <div id="selectordiv"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-5 col-lg-5">
+                <!-- Earnings (Monthly) Card Example -->
+
+                <div class="card shadow mb-4">
+                  <!-- Card Header - Dropdown -->
+                  <div
+                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
+                  >
+                    <h6 class="m-0 font-weight-bold text-primary">
+                      Building Consumption Forecast (Avg Reference)
+                    </h6>
+                  </div>
+                  <!-- Card Body -->
+                  <div class="card-body">
+                    <div class="card-body">
+                      <div class="progressBar energy-dash">
+                        <div class="pb1">
+                          <div class="build_label">
+                            <a href="energy.html">Building 1</a>
+                          </div>
+                          <div
+                            class="pBar"
+                            data-from="0"
+                            data-to="12"
+                            data-color="#1cc88999,#f6c23e99,#e74a3b99"
+                          ></div>
+                          <div class="value_label">&nbsp;&nbsp;124231 kWh</div>
+                        </div>
+                        <div class="pb1">
+                          <div class="build_label">
+                            <a href="energy.html">Building 2</a>
+                          </div>
+                          <div
+                            class="pBar"
+                            data-from="0"
+                            data-to="28"
+                            data-color="#1cc88999,#f6c23e99,#e74a3b99"
+                          ></div>
+                          <div class="value_label">&nbsp;&nbsp;423432 kWh</div>
+                        </div>
+                        <div class="pb1">
+                          <div class="build_label">
+                            <a href="energy.html">Building 3</a>
+                          </div>
+                          <div
+                            class="pBar"
+                            data-from="0"
+                            data-to="75"
+                            data-color="#1cc88999,#f6c23e99,#e74a3b99"
+                          ></div>
+                          <div class="value_label">&nbsp;&nbsp;913423 kWh</div>
+                        </div>
+                        <div class="pb1">
+                          <div class="build_label">
+                            <a href="energy.html">Building 4</a>
+                          </div>
+                          <div
+                            class="pBar"
+                            data-from="0"
+                            data-to="18"
+                            data-color="#1cc88999,#f6c23e99,#e74a3b99"
+                          ></div>
+                          <div class="value_label">&nbsp;&nbsp;223423 kWh</div>
+                        </div>
+                        <div class="pb1">
+                          <div class="build_label">
+                            <a href="energy.html">Building 5</a>
+                          </div>
+                          <div
+                            class="pBar"
+                            data-from="0"
+                            data-to="34"
+                            data-color="#1cc88999,#f6c23e99,#e74a3b99"
+                          ></div>
+                          <div class="value_label">&nbsp;&nbsp;333423 kWh</div>
+                        </div>
+                        <div class="pb1">
+                          <div class="build_label">
+                            <a href="energy.html">Building 6</a>
+                          </div>
+                          <div
+                            class="pBar"
+                            data-from="0"
+                            data-to="23"
+                            data-color="#1cc88999,#f6c23e99,#e74a3b99"
+                          ></div>
+                          <div class="value_label">&nbsp;&nbsp;244564 kWh</div>
+                        </div>
+                      </div>
+                      <div class="chart-legend breakdown-chart">
+                        <span><span class="green-legend"></span> 0-30 % </span>
+                        <span><span class="yellow-legend"></span> 30-50 %</span>
+                        <span><span class="red-legend"></span> 50-100 %</span>
+                      </div>
+                      <!-- <div id="breakdown"></div>
+                                        <button id="current_btn" class="chart-button mt4">Current Month</button>
+                                        <button id="previous_btn" class="chart-button mt4">Previous Month</button> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Pie Chart -->
+            </div>
+
+            <div class="row">
+              <!-- Area Chart -->
+              <div class="col-xl-6 col-lg-6">
+                <div class="row">
+                  <div class="col-xl-6 col-lg-6">
+                    <div class="card shadow mb-4">
+                      <!-- Card Header - Dropdown -->
+                      <div
+                        class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
+                      >
+                        <h6
+                          class="m-0 font-weight-bold text-primary gauge-head sav"
+                        >
+                          Monthly Energy Savings
+                        </h6>
+                        <div id="button-sec">
+                          <button
+                            id="floor_sav_btn"
+                            title="Show Floor Wise"
+                            class="chart-button"
+                          >
+                            <i class="fas fa-fw fa-chart-bar"></i>
+                          </button>
+                          <button
+                            id="build_sav_btn"
+                            title="Show Current Building"
+                            class="chart-button"
+                          >
+                            <i class="fas fa-fw fa-tachometer-alt"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <!-- Card Body -->
+                      <div class="card-body sav_g_chart">
+                        <div id="cost_gauge"></div>
+                        <label class="gauge_label"
+                          >in kWh: <span>50542 kWh</span></label
+                        >
+                        <div id="button-sec">
+                          <button id="sav_weekly_btn" class="chart-button mt4">
+                            Weekly
+                          </button>
+                          <button id="sav_monthly_btn" class="chart-button mt4">
+                            Monthly
+                          </button>
+                          <button id="sav_yearly_btn" class="chart-button mt4">
+                            Yearly
+                          </button>
+                        </div>
+                      </div>
+                      <div class="card-body sav_b_chart">
+                        <div id="sav_b_chart"></div>
+                        <div id="button-sec">
+                          <button
+                            id="sav_b_weekly_btn"
+                            class="chart-button mt4"
+                          >
+                            Weekly
+                          </button>
+                          <button
+                            id="sav_b_monthly_btn"
+                            class="chart-button mt4"
+                          >
+                            Monthly
+                          </button>
+                          <button
+                            id="sav_b_yearly_btn"
+                            class="chart-button mt4"
+                          >
+                            Yearly
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-6">
+                    <div class="card shadow mb-4">
+                      <!-- Card Header - Dropdown -->
+                      <div
+                        class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
+                      >
+                        <h6
+                          class="m-0 font-weight-bold text-primary gauge-head cons"
+                        >
+                          Monthly Energy Consumption
+                        </h6>
+                        <div id="button-sec">
+                          <button
+                            id="floor_cons_btn"
+                            title="Show Floor Wise"
+                            class="chart-button"
+                          >
+                            <i class="fas fa-fw fa-chart-bar"></i>
+                          </button>
+                          <button
+                            id="build_cons_btn"
+                            title="Show Current Building"
+                            class="chart-button"
+                          >
+                            <i class="fas fa-fw fa-tachometer-alt"></i>
+                          </button>
+                          <button
+                            type="button"
+                            id="heat_sav_btn"
+                            title="Overall Building Heatmap"
+                            class="chart-button"
+                            data-toggle="modal"
+                            data-target=".bd-example-modal-lg"
+                          >
+                            <i class="fa fa-th" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <!-- Card Body -->
+                      <div class="card-body cons_g_chart">
+                        <div id="intensity_gauge"></div>
+                        <div id="button-sec">
+                          <button id="cons_weekly_btn" class="chart-button mt4">
+                            Weekly
+                          </button>
+                          <button
+                            id="cons_monthly_btn"
+                            class="chart-button mt4"
+                          >
+                            Monthly
+                          </button>
+                          <button id="cons_yearly_btn" class="chart-button mt4">
+                            Yearly
+                          </button>
+                        </div>
+                      </div>
+                      <div class="card-body cons_b_chart">
+                        <div id="cons_b_chart"></div>
+                        <div id="button-sec">
+                          <button
+                            id="cons_b_weekly_btn"
+                            class="chart-button mt4"
+                          >
+                            Weekly
+                          </button>
+                          <button
+                            id="cons_b_monthly_btn"
+                            class="chart-button mt4"
+                          >
+                            Monthly
+                          </button>
+                          <button
+                            id="cons_b_yearly_btn"
+                            class="chart-button mt4"
+                          >
+                            Yearly
+                          </button>
+                        </div>
+                      </div>
+
+                      <!-- heatmap model -->
+                      <div
+                        class="modal fade bd-example-modal-lg"
+                        tabindex="-1"
+                        role="dialog"
+                        aria-labelledby="myLargeModalLabel"
+                        aria-hidden="true"
+                      >
+                        <div class="modal-dialog modal-lg">
+                          <div class="modal-content">
+                            <div id="heatmap_consumption"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- <div class="col-xl-4 col-lg-4">
+                                <div class="card shadow mb-4">
+                                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">
+                                      Monthly Power Generation
+                                    </h6>
+                                  </div>
+                                  <div class="card-body">
+                                    <div id="total_gauge_new"></div>
+                                  </div>
+                                </div>
+                              </div> -->
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6">
+                <div class="card shadow mb-4">
+                  <!-- Card Header - Dropdown -->
+                  <div
+                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
+                  >
+                    <h6 class="m-0 font-weight-bold text-primary">
+                      PUE ( Building Wise)
+                    </h6>
+                  </div>
+                  <!-- Card Body -->
+                  <div class="card-body">
+                    <div class="chart-area">
+                      <div id="pue_chart"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <!-- Area Chart -->
+
+              <!-- Pie Chart -->
+              <div class="col-xl-6 col-lg-6">
+                <div class="card shadow mb-4">
+                  <!-- Card Header - Dropdown -->
+                  <div
+                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
+                  >
+                    <h6
+                      class="m-0 font-weight-bold text-primary facility_load_chart"
+                    >
+                      Facility Consumption - kWh
+                    </h6>
+                  </div>
+                  <div class="card-body">
+                    <div class="detail-section abs_sec">
+                      <span class="chart-label"
+                        >Total Facility Consumption:
+                      </span>
+                      <span class="chart-unit"> 21822.4 kWh</span>
+                    </div>
+                    <div id="facility_load"></div>
+                    <div id="button-sec">
+                      <button id="facility_weekly_btn" class="chart-button mt4">
+                        Weekly
+                      </button>
+                      <button
+                        id="facility_monthly_btn"
+                        class="chart-button mt4"
+                      >
+                        Monthly
+                      </button>
+                      <button id="facility_yearly_btn" class="chart-button mt4">
+                        Yearly
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6">
+                <div class="card shadow mb-4">
+                  <!-- Card Header - Dropdown -->
+                  <div
+                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
+                  >
+                    <h6
+                      class="m-0 font-weight-bold text-primary power_cost_chart"
+                    >
+                      Total Power Consumption with Cost - Current Day
+                    </h6>
+                  </div>
+                  <!-- Card Body -->
+                  <div class="card-body">
+                    <div id="tot_cons"></div>
+                    <div id="button-sec">
+                      <button id="daily_btn" class="chart-button mt4">
+                        Daily
+                      </button>
+                      <button id="weekly_btn" class="chart-button mt4">
+                        Weekly
+                      </button>
+                      <button id="monthly_btn" class="chart-button mt4">
+                        Monthly
+                      </button>
+                      <button id="yearly_btn" class="chart-button mt4">
+                        Yearly
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Content Row -->
+          </div>
+          <!-- /.container-fluid -->
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Copyright &copy; Your Website 2022</span>
+            </div>
+          </div>
+        </footer>
+        <!-- End of Footer -->
+      </div>
+      <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div
+      class="modal fade"
+      id="logoutModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button
+              class="close"
+              type="button"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Select "Logout" below if you are ready to end your current session.
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-secondary"
+              type="button"
+              data-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <a
+              class="btn btn-primary"
+              id="logout"
+              href="http://localhost/logout"
+              >Logout</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Resources -->
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+    <!-- Resources -->
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/dark.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/plugins/rangeSelector.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/lang/es_ES.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://www.chartjs.org/dist/2.6.0/Chart.bundle.js"></script>
+    <script src="https://www.chartjs.org/samples/2.6.0/utils.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/js/themes/dark-unica.js"></script>
+    <script src="https://code.highcharts.com/modules/heatmap.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/boost-canvas.js"></script>
+    <script src="https://code.highcharts.com/modules/boost.js"></script>
+    <script src="js/jquery.pBar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.5.0/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script>
+      // $(function () {
+      $(document).ready(function () {
+        $("#logout").click(function () {
+          $.post(
+            "/logout",
+            {
+              name: "JSESSIONID",
+            },
+            function (data, status) {
+              console.log(data);
+            }
+          );
+        });
+      });
+      var socket = io.connect("localhost:1337");
+      // });
+      am4core.ready(function () {
+        // Themes begin
+        am4core.useTheme(am4themes_dark);
+        am4core.useTheme(am4themes_animated);
+        // Themes end
+
+        // Create chart
+        var chart = am4core.create("chartdiv", am4charts.XYChart);
+
+        var data = [];
+        var price1 = 1000,
+          price2 = 1200;
+        var quantity = 30000;
+        for (var i = 0; i < 360; i++) {
+          price1 += Math.round(
+            (Math.random() < 0.5 ? 1 : 0) * Math.random() * 100
+          );
+          data.push({ date1: new Date(2019, 0, i), price1: price1 });
+        }
+        for (var i = 0; i < 360; i++) {
+          price2 += Math.round(
+            (Math.random() < 0.5 ? 1 : 0) * Math.random() * 100
+          );
+          data.push({ date2: new Date(2020, 0, i), price2: price2 });
+        }
+
+        chart.data = data;
+
+        var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+        dateAxis.renderer.grid.template.location = 0;
+        dateAxis.renderer.labels.template.fill = am4core.color("#357cff");
+
+        var dateAxis2 = chart.xAxes.push(new am4charts.DateAxis());
+        dateAxis2.renderer.grid.template.location = 0;
+        dateAxis2.renderer.labels.template.fill = am4core.color("#1cc88a");
+
+        var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+        valueAxis.tooltip.disabled = true;
+        valueAxis.renderer.labels.template.fill = am4core.color("#357cff");
+
+        valueAxis.renderer.minWidth = 60;
+
+        // var valueAxis2 = chart.yAxes.push(new am4charts.ValueAxis());
+        // valueAxis2.tooltip.disabled = true;
+        // valueAxis2.renderer.labels.template.fill = am4core.color("#18637c");
+        // valueAxis2.renderer.minWidth = 60;
+        // valueAxis2.syncWithAxis = valueAxis;
+
+        var series = chart.series.push(new am4charts.LineSeries());
+        series.name = "Year 1";
+        series.dataFields.dateX = "date1";
+        series.dataFields.valueY = "price1";
+        series.tooltipText = "{valueY.value} kWh";
+        series.fill = am4core.color("#357cff");
+        series.stroke = am4core.color("#357cff");
+        //series.strokeWidth = 3;
+
+        var series2 = chart.series.push(new am4charts.LineSeries());
+        series2.name = "Year 2";
+        series2.dataFields.dateX = "date2";
+        series2.dataFields.valueY = "price2";
+        series2.yAxis = valueAxis;
+        series2.xAxis = dateAxis2;
+        series2.tooltipText = "{valueY.value} kWh";
+        series2.fill = am4core.color("#1cc88a");
+        series2.stroke = am4core.color("#1cc88a");
+        // series2.fillOpacity = 0.3;
+        //series2.strokeWidth = 3;
+
+        chart.cursor = new am4charts.XYCursor();
+        chart.cursor.xAxis = dateAxis2;
+
+        chart.legend = new am4charts.Legend();
+        chart.legend.parent = chart.plotContainer;
+        chart.legend.zIndex = 100;
+
+        valueAxis.renderer.grid.template.strokeOpacity = 0.07;
+        dateAxis2.renderer.grid.template.strokeOpacity = 0.07;
+        dateAxis.renderer.grid.template.strokeOpacity = 0.07;
+        valueAxis.renderer.grid.template.strokeOpacity = 0.07;
+
+        // Add range selector
+        var selector = new am4plugins_rangeSelector.DateAxisRangeSelector();
+        selector.container = document.getElementById("selectordiv");
+        selector.axis = dateAxis;
+        selector.axis = dateAxis2;
+      });
+    </script>
+
+    <script type="text/JavaScript">
+      // monthly Energy cost gauges
+         am4core.useTheme(am4themes_dark);
+         am4core.useTheme(am4themes_animated);
+         // Themes end
+
+         // create chart
+         var chart = am4core.create("cost_gauge", am4charts.GaugeChart);
+         chart.innerRadius = am4core.percent(82);
+
+         /**
+          * Normal axis
+          */
+         var axis = chart.xAxes.push(new am4charts.ValueAxis());
+         axis.min = -30;
+         axis.max = 30;
+         axis.strictMinMax = true;
+         axis.renderer.radius = am4core.percent(80);
+         axis.renderer.inside = false;
+         axis.renderer.line.strokeOpacity = 1;
+         axis.renderer.ticks.template.disabled = false;
+         axis.renderer.ticks.template.strokeOpacity = 1;
+         axis.renderer.ticks.template.length = 20;
+         axis.renderer.grid.template.disabled = true;
+         axis.renderer.labels.template.radius = 35;
+         axis.renderer.labels.template.adapter.add("text", function (text) {
+           return text;
+         });
+
+         /**
+          * Axis for ranges
+          */
+
+         var colorSet = new am4core.ColorSet();
+
+         var axis2 = chart.xAxes.push(new am4charts.ValueAxis());
+         axis2.min = -30;
+         axis2.max = 30;
+         axis2.strictMinMax = true;
+         axis2.renderer.labels.template.disabled = true;
+         axis2.renderer.ticks.template.disabled = true;
+         axis2.renderer.grid.template.disabled = true;
+
+         var range0 = axis2.axisRanges.create();
+         range0.value = 0;
+         range0.endValue =  144.3;
+        //  range0.axisFill.fillOpacity = 1;
+        //  range0.axisFill.fill = "#8f8d00";
+
+         var range1 = axis2.axisRanges.create();
+         range1.value =  2.3;
+         range1.endValue = 30;
+        //  range1.axisFill.fillOpacity = 1;
+        //  range1.axisFill.fill = "#18637c";
+
+         /**
+          * Label
+          */
+
+         var label2 = chart.radarContainer.createChild(am4core.Label);
+         label2.isMeasured = false;
+         label2.fontSize = 32;
+         label2.x = am4core.percent(50);
+         label2.y = am4core.percent(100);
+         label2.horizontalCenter = "middle";
+         label2.verticalCenter = "top";
+         label2.text = "2.3 %";
+
+         /**
+          * Hand
+          */
+
+         var hand2 = chart.hands.push(new am4charts.ClockHand());
+         hand2.axis = axis2;
+         hand2.innerRadius = am4core.percent(20);
+         hand2.startWidth = 5;
+         hand2.pin.disabled = true;
+         hand2.value = 2.3;
+         var gradient = new am4core.LinearGradient();
+          gradient.stops.push({color:am4core.color("red")})
+          gradient.stops.push({color:am4core.color("yellow")})
+          gradient.stops.push({color:am4core.color("green")})
+
+          axis.renderer.line.stroke = gradient;
+          axis.renderer.line.strokeWidth = 25;
+          axis.renderer.line.strokeOpacity = 1;
+
+          axis.renderer.grid.template.disabled = true;
+
+          $('#sav_weekly_btn').click(function () {
+                        // alert("weekly_btn");
+                       label2.text = "1.3 %";
+                       hand2.value = 1.3;
+                        $("label.gauge_label span").html("23421 kWh");
+                        $(".sav.gauge-head").html("Weekly Energy Savings");
+
+                      });
+        $('#sav_monthly_btn').click(function () {
+                        // alert("current_btn");
+                        label2.text = "2.3 %";
+                        hand2.value = 2.3;
+                        $("label.gauge_label span").html("50542 kWh");
+                        $(".sav.gauge-head").html("Monthly Energy Savings");
+                      });
+        $('#sav_yearly_btn').click(function () {
+                        // alert("current_btn");
+                        label2.text = "4.3 %";
+                        hand2.value = 4.3;
+                        $("label.gauge_label span").html("80113 kWh");
+
+                        $(".sav.gauge-head").html("Yearly Energy Savings");
+                      });
+
+                       //bar chart
+                      var options = {
+                        series: [{
+                        name: 'Savings',
+                        data: [2.3, 3.1, -1.1, -2.3, 3.6],
+                        color: "#1cc88999",
+                        showInLegend: false,
+                        zones: [{
+                                  value: 1
+                                }, {
+                                  color: '#ac0000'
+                                }]
+                      }],
+                        chart: {
+                        height: 350,
+                        type: 'bar',
+                        toolbar: {
+                          show: false,
+                        },
+                        backgroundColor: 'rgba(0,0,0,0)'
+                      },
+                      plotOptions: {
+                        bar: {
+                          borderRadius: 10,
+                          dataLabels: {
+                            position: 'top', // top, center, bottom
+                          },
+                        }
+                      },
+                      dataLabels: {
+                        enabled: true,
+                        formatter: function (val) {
+                          return val + "%";
+                        },
+                        offsetY: -20,
+                        style: {
+                          fontSize: '12px',
+                          colors: ["#ffffff"]
+                        }
+                      },
+                      xaxis: {
+                        categories: ["Building 1", "Building 2", "Building 3", "Building 4", "Building 5"],
+                        position: 'top',
+                        axisBorder: {
+                          show: false
+                        },
+                        axisTicks: {
+                          show: false
+                        },
+                        crosshairs: {
+                          fill: {
+                            type: 'gradient',
+                            gradient: {
+                              colorFrom: '#D8E3F0',
+                              colorTo: '#BED1E6',
+                              stops: [0, 100],
+                              opacityFrom: 0.4,
+                              opacityTo: 0.5,
+                            }
+                          }
+                        },
+                        tooltip: {
+                          enabled: true,
+                        },
+                        labels: {
+                                  style: {
+                                    colors: "#fff",
+                                    fontSize: '12px',
+                                    fontWeight: 400,
+                                    cssClass: 'apexcharts-xaxis-label',
+                                  },
+                                },
+                      },
+                      yaxis: {
+                        axisBorder: {
+                          show: false
+                        },
+                        axisTicks: {
+                          show: false,
+                        },
+                        labels: {
+                          show: false,
+                          formatter: function (val) {
+                            return val + "%";
+                          },
+                        }
+
+                      },
+                      grid: {
+                        show: true,
+                         borderColor: '#434040',
+                      },
+                      title: {
+                        // text: 'Monthly Inflation in Argentina, 2002',
+                        floating: true,
+                        offsetY: 330,
+                        align: 'center',
+                        style: {
+                          color: '#444'
+                        }
+                      }
+                      };
+
+                      var chartBar = new ApexCharts(document.querySelector("#sav_b_chart"), options);
+                      chartBar.render();
+
+                      $('#floor_sav_btn').click(function () {
+                        $(".sav_g_chart").hide();
+                        $(".sav_b_chart").show();
+                        $("#build_sav_btn").show();
+                        $(this).hide();
+                      });
+                      $('#build_sav_btn').click(function () {
+                        $(".sav_g_chart").show();
+                        $(".sav_b_chart").hide();
+                        $('#floor_sav_btn').show();
+                        $(this).hide();
+                      });
+                      $("#sav_b_weekly_btn").click(function () {
+                        chartBar.updateOptions({
+                           series: [{
+                              data: [2.3, 3.1, -1.1, -2.3, 3.6],
+                            }],
+                        });
+                        $(".sav.gauge-head").html("Weekly Energy Savings");
+                      });
+                      $("#sav_b_monthly_btn").click(function () {
+                        chartBar.updateOptions({
+                          series: [{
+                              data: [3.3, 2.1, -2.1, -1.3, 2.6],
+                            }],
+                        });
+                        $(".sav.gauge-head").html("Monthly Energy Savings");
+                      });
+                      $("#sav_b_yearly_btn").click(function () {
+                        chartBar.updateOptions({
+                          series: [{
+                              data: [4.2, 2.1, -2.1, -3.3, 4.6],
+                            }],
+                        });
+                        $(".sav.gauge-head").html("Yearly Energy Savings");
+                      });
+    </script>
+    <script type="text/JavaScript">
+                     // mnthly Energy intensity gauges
+                   am4core.useTheme(am4themes_dark);
+                   am4core.useTheme(am4themes_animated);
+                   // Themes end
+
+                   // create chart
+                   var chart = am4core.create("intensity_gauge", am4charts.GaugeChart);
+                   chart.innerRadius = am4core.percent(82);
+
+                   /**
+                    * Normal axis
+                    */
+
+                   var axis = chart.xAxes.push(new am4charts.ValueAxis());
+                   axis.min = 0;
+                   axis.max = 10000;
+                   axis.strictMinMax = true;
+                   axis.renderer.radius = am4core.percent(80);
+                   axis.renderer.inside = false;
+                   axis.renderer.line.strokeOpacity = 1;
+                   axis.renderer.ticks.template.disabled = false;
+                   axis.renderer.ticks.template.strokeOpacity = 1;
+                   axis.renderer.ticks.template.length = 20;
+                   axis.renderer.grid.template.disabled = true;
+                   axis.renderer.labels.template.radius = 35;
+                   axis.renderer.labels.template.adapter.add("text", function (text) {
+                     return text;
+                   });
+
+                   /**
+                    * Axis for ranges
+                    */
+
+                   var colorSet = new am4core.ColorSet();
+
+                   var axis2 = chart.xAxes.push(new am4charts.ValueAxis());
+                   axis2.min = 0;
+                   axis2.max = 10000;
+                   axis2.strictMinMax = true;
+                   axis2.renderer.labels.template.disabled = true;
+                   axis2.renderer.ticks.template.disabled = true;
+                   axis2.renderer.grid.template.disabled = true;
+
+                   var range0 = axis2.axisRanges.create();
+                   range0.value = 0;
+                   range0.endValue = 1274.3;
+                  //  range0.axisFill.fillOpacity = 1;
+                  //  range0.axisFill.fill = "#8f8d00";
+
+                   var range1 = axis2.axisRanges.create();
+                   range1.value = 1274.3;
+                   range1.endValue = 10000;
+                  //  range1.axisFill.fillOpacity = 1;
+                  //  range1.axisFill.fill = "#18637c";
+
+                   /**
+                    * Label
+                    */
+
+                   var label3 = chart.radarContainer.createChild(am4core.Label);
+                   label3.isMeasured = false;
+                   label3.fontSize = 32;
+                   label3.x = am4core.percent(50);
+                   label3.y = am4core.percent(100);
+                   label3.horizontalCenter = "middle";
+                   label3.verticalCenter = "top";
+                   label3.text = "1274.3 MWh";
+
+                   /**
+                    * Hand
+                    */
+
+                   var hand3 = chart.hands.push(new am4charts.ClockHand());
+                   hand3.axis = axis2;
+                   hand3.innerRadius = am4core.percent(20);
+                   hand3.startWidth = 5;
+                   hand3.pin.disabled = true;
+                   hand3.value = 1274.3;
+
+
+                           var gradient = new am4core.LinearGradient();
+                    gradient.stops.push({color:am4core.color("green")})
+                    gradient.stops.push({color:am4core.color("yellow")})
+                    gradient.stops.push({color:am4core.color("red")})
+
+                    axis.renderer.line.stroke = gradient;
+                    axis.renderer.line.strokeWidth = 25;
+                    axis.renderer.line.strokeOpacity = 1;
+
+                    axis.renderer.grid.template.disabled = true;
+                    var interval = null;
+                    socket.on('log_message', function(data) {
+                        console.log(data);
+                        function getVal(code) {
+                            return Object.values(data.values).filter(user => user.name === code);
+                        }
+
+                        var RunHrs = getVal('RunHrs');
+                        var SupplyFanCmd = getVal('SupplyFanCmd');
+
+                        var SupplyFanCmdStatus = SupplyFanCmd[0].value;
+                        var SupplyFanCmdKwh = RunHrs[0].value;
+                        range1.value = SupplyFanCmdKwh;
+                        label3.text = SupplyFanCmdKwh+" MWh";
+                        hand3.value = SupplyFanCmdKwh;
+                    });
+      $('#cons_weekly_btn').click(function () {
+                              // alert("weekly_btn");
+                              // $(this).addClass("active_btn");
+                             label3.text = "974 MWh";
+                             hand3.value = 974;
+                              // $("label.gauge_label span").html("23421 kWh");
+                              $(".cons.gauge-head").html("Weekly Energy Consumption");
+                              if (interval === null) {
+                                interval = setInterval(function() {
+                                    var value = 0 + Math.random() * (9000 - 0);
+                                    hand3.showValue(value, 1000, am4core.ease.cubicOut);
+                                    label3.text = value.toFixed(1) + " MWh";
+                                }, 2000);
+                              }
+                            });
+              $('#cons_monthly_btn').click(function () {
+                              // alert("current_btn");
+                              label3.text = "1274 MWh";
+                              hand3.value = 1274;
+                              // $("label.gauge_label span").html("50542 kWh");
+                              $(".cons.gauge-head").html("Monthly Energy Consumption");
+                              if (interval !== null) {
+                                  clearInterval(interval);
+                                  interval = null;
+                              }
+                            });
+              $('#cons_yearly_btn').click(function () {
+                              // alert("current_btn");
+                              label3.text = "4274 MWh";
+                              hand3.value = 4274;
+                              // $("label.gauge_label span").html("80113 kWh");
+
+                              $(".cons.gauge-head").html("Yearly Energy Consumption");
+                              if (interval !== null) {
+                                  clearInterval(interval);
+                                  interval = null;
+                              }
+                            });
+
+                            // cons bar chart
+                            //bar chart
+                            var options = {
+                              series: [{
+                              name: 'Consumption',
+                              data: [231, 342, 242, 341, 442],
+                              color: "#1cc88999",
+                              showInLegend: false,
+                              zones: [{
+                                        value: 1
+                                      }, {
+                                        color: '#ac0000'
+                                      }]
+                            }],
+                              chart: {
+                              height: 250,
+                              type: 'bar',
+                              toolbar: {
+                                show: false,
+                              },
+                              backgroundColor: 'rgba(0,0,0,0)'
+                            },
+                            plotOptions: {
+                              bar: {
+                                borderRadius: 10,
+                                dataLabels: {
+                                  position: 'top', // top, center, bottom
+                                },
+                              }
+                            },
+                            dataLabels: {
+                              enabled: true,
+                              formatter: function (val) {
+                                return val + " MWh";
+                              },
+                              offsetY: -20,
+                              style: {
+                                fontSize: '12px',
+                                colors: ["#ffffff"]
+                              }
+                            },
+                            xaxis: {
+                              categories: ["Building 1", "Building 2", "Building 3", "Building 4", "Building 5"],
+                              position: 'bottom',
+                              axisBorder: {
+                                show: false
+                              },
+                              axisTicks: {
+                                show: false
+                              },
+                              crosshairs: {
+                                fill: {
+                                  type: 'gradient',
+                                  gradient: {
+                                    colorFrom: '#D8E3F0',
+                                    colorTo: '#BED1E6',
+                                    stops: [0, 100],
+                                    opacityFrom: 0.4,
+                                    opacityTo: 0.5,
+                                  }
+                                }
+                              },
+                              tooltip: {
+                                enabled: true,
+                              },
+                              labels: {
+                                        style: {
+                                          colors: "#fff",
+                                          fontSize: '12px',
+                                          fontWeight: 400,
+                                          cssClass: 'apexcharts-xaxis-label',
+                                        },
+                                      },
+                            },
+                            yaxis: {
+                              axisBorder: {
+                                show: false
+                              },
+                              axisTicks: {
+                                show: false,
+                              },
+                              labels: {
+                                show: false,
+                                formatter: function (val) {
+                                  return val + " MWh";
+                                },
+                              }
+
+                            },
+                            grid: {
+                              show: true,
+                               borderColor: '#434040',
+                            },
+                            title: {
+                              // text: 'Monthly Inflation in Argentina, 2002',
+                              floating: true,
+                              offsetY: 330,
+                              align: 'center',
+                              style: {
+                                color: '#444'
+                              }
+                            }
+                            };
+
+                            var chartBar = new ApexCharts(document.querySelector("#cons_b_chart"), options);
+                            chartBar.render();
+
+                            $("#cons_b_weekly_btn").click(function () {
+                              chartBar.updateOptions({
+                                 series: [{
+                                    data: [313, 423, 423, 412, 421],
+                                  }],
+                              });
+                            });
+                            $("#cons_b_monthly_btn").click(function () {
+                              chartBar.updateOptions({
+                                series: [{
+                                    data: [231, 342, 242, 341, 442],
+                                  }],
+                              });
+                            });
+                            $("#cons_b_yearly_btn").click(function () {
+                              chartBar.updateOptions({
+                                series: [{
+                                    data: [867, 768, 764, 566, 957],
+                                  }],
+                              });
+                            });
+
+                          //title icon show/hide
+                          $('#floor_cons_btn').click(function () {
+                              $(".cons_g_chart").hide();
+                              $(".cons_b_chart").show();
+                              $("#build_cons_btn").show();
+                              $(this).hide();
+                            });
+                            $('#build_cons_btn').click(function () {
+                              $(".cons_g_chart").show();
+                              $(".cons_b_chart").hide();
+                              $('#floor_cons_btn').show();
+                              $(this).hide();
+                            });
+
+
+
+                            // heatmap
+
+                            $('#heatmap_consumption').highcharts({
+
+                                chart: {
+                                    type: 'heatmap',
+                                    marginTop: 100,
+                                    marginBottom: 80,
+                                    zoomType:'xy',
+                                },
+
+
+                                title: {
+                                    text: 'Overall Building Consumption Heatmap 2020-21'
+                                },
+
+                                xAxis: [{
+                                    categories: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'Septemper', 'October', 'November', 'December', 'January', 'February', 'March', 'April']
+                                },{
+                                    linkedTo: 0,
+                                    /* opposite: true, */
+                                  /*   categories: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'Septemper', 'October'] */
+                                }],
+
+                                yAxis: {
+                                    categories: ['Building 1', 'Building 2', 'Building 3', 'Building 4', 'Building 5'],
+                                    title: null
+                                },
+
+                                colorAxis: {
+                                stops: [
+                                  [0, '#3060cf'],
+                                    [0.5, '#005032'],
+                                    [0.9, '#9a6e00'],
+                                    [1, '#850c00']
+                                ],
+                                    min: 1,
+                                max: 10000,
+                                startOnTick: false,
+                                endOnTick: false,
+                                labels: {
+                                    format: '{value} kWh'
+                                }
+                                },
+
+                                legend: {
+                                    align: 'right',
+                                    layout: 'vertical',
+                                    margin: 0,
+                                    verticalAlign: 'top',
+                                    y: 80,
+                                    x: -20,
+                                    symbolHeight: 225
+                                },
+
+                                tooltip: {
+                                    formatter: function () {
+                                        /* return '<b>' + this.series.xAxis.categories[this.point.x] + '</b> sold <br><b>' +
+                                            this.point.value + '</b> items on <br><b>' + this.series.yAxis.categories[this.point.y] + '</b>'; */
+
+                                            return '<b>' + this.series.yAxis.categories[this.point.y] + '</b> Consumed <b>' +this.point.value + ' kWh</b> in '+ this.series.xAxis.categories[this.point.x];
+                                    }
+                                },
+
+                                series: [{
+                                    name: 'Consumed per month and floor',
+                                    borderWidth: 1,
+                                    data: [[0, 0, 1000], [0, 1, 1912], [0, 2, 8124], [0, 3, 2544], [0, 4, 6127], [1, 0, 9221], [1, 1, 5458], [1, 2, 6568], [1, 3, 1417], [1, 4, 4845], [2, 0, 3545], [2, 1, 4534], [2, 2, 6898], [2, 3, 6478], [2, 4, 5452], [3, 0, 7452], [3, 1, 1382], [3, 2, 6814], [3, 3, 9819], [3, 4, 1856], [4, 0, 5438], [4, 1, 7855], [4, 2, 2148], [4, 3, 8117], [4, 4, 6115], [5, 0, 8988], [5, 1, 7532], [5, 2, 5612], [5, 3, 4556], [5, 4, 7120], [6, 0, 3513], [6, 1, 4445], [6, 2, 8458], [6, 3, 9845], [6, 4, 9455], [7, 0, 3451], [7, 1, 1232], [7, 2, 8652], [7, 3, 3265], [7, 4, 3540], [8, 0, 5585], [8, 1, 9777], [8, 2, 1273], [8, 3, 6454], [8, 4, 8884], [9, 0, 4887], [9, 1, 7114], [9, 2, 7831], [9, 3, 8428], [9, 4, 4591] , [10, 0, 2887], [10, 1, 4114], [10, 2, 5831], [10, 3, 2428], [10, 4, 5491], [11, 0, 4353], [11, 1, 2342], [11, 2, 2342], [11, 3, 5645], [11, 4, 2342], [12, 0, 2342], [12, 1, 3212], [12, 2, 7443], [12, 3, 5447], [12, 4, 2235], [13, 0, 7653], [13, 1, 8533], [13, 2, 9356], [13, 3, 8999], [13, 4, 4367], [14, 0, 8656], [14, 1, 9832], [14, 2, 8945], [14, 3, 9875], [14, 4, 8674], [15, 0, 9210], [15, 1, 2345], [15, 2, 6574], [15, 3, 2346], [15, 4, 7633]],
+                                    dataLabels: {
+                                        enabled: false,
+                                        color: '#000000'
+                                    }
+                                }]
+
+                            });
+    </script>
+    <script type="text/JavaScript">
+      var options = {
+          series: [{
+                      name: "Consumption",
+                      data: [563, 445, 633, 485, 254, 354, 687],
+                      color: "#1cc88a"
+                    }, {
+                      name: "INR",
+                      data: [600, 520, 721, 656, 428, 462, 786],
+                      color: "#4e73df"
+                  }],
+          chart: {
+          type: 'bar',
+          height: 350,
+          toolbar: {
+              show: false,
+          },
+        },
+        plotOptions: {
+          bar: {
+            horizontal: true,
+            dataLabels: {
+              position: 'top',
+            },
+          }
+        },
+        dataLabels: {
+          enabled: true,
+          offsetX: -6,
+          style: {
+            fontSize: '12px',
+            colors: ['#fff']
+          }
+        },
+        legend: {
+              tooltipHoverFormatter: function (val, opts) {
+                return val + ' - ' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + ''
+              },
+              labels: {
+                colors: "#fff",
+                useSeriesColors: false
+              },
+            },
+        stroke: {
+          show: true,
+          width: 1,
+          colors: ['#fff']
+        },
+        xaxis: {
+          categories: ["Building 1", "Building 2", "Building 3", "Building 4", "Building 5", "Building 6"],
+          labels: {
+                style: {
+                  colors: "#fff",
+                  fontSize: '12px',
+                  fontWeight: 400,
+                  cssClass: 'apexcharts-xaxis-label',
+                },
+              },
+        },
+        yaxis: {
+          labels: {
+                style: {
+                  colors: "#fff",
+                  fontSize: '12px',
+                  fontWeight: 400,
+                  cssClass: 'apexcharts-xaxis-label',
+                },
+              },
+        },
+        tooltip: {
+                        y: {
+                            formatter: (value) => { return value + "" },
+                        }
+                        }
+        };
+
+        var tot_cons = new ApexCharts(document.querySelector("#tot_cons"), options);
+        tot_cons.render();
+
+        $('#daily_btn').click(function () {
+                        // alert("daily_btn");
+                        tot_cons.updateOptions({
+                          series: [{
+                                      name: "Consumption",
+                                      data: [563, 445, 633, 485, 254, 354, 687],
+                                      color: "#1cc88a"
+                                    }, {
+                                      name: "INR",
+                                      data: [600, 520, 721, 656, 428, 462, 786],
+                                      color: "#4e73df"
+                                  }],
+                        });
+                        $(".power_cost_chart").html("Total Power Consumption with Cost - Current Day");
+
+                      });
+        $('#weekly_btn').click(function () {
+                        // alert("weekly_btn");
+                        tot_cons.updateOptions({
+                          series: [{
+                                      name: "Consumption",
+                                      data: [1163, 1445, 2633, 3485, 2254, 3354, 1987],
+                                      color: "#1cc88a"
+                                    }, {
+                                      name: "INR",
+                                      data: [2000, 2203, 3210, 4560, 3287, 4628, 2869],
+                                      color: "#4e73df"
+                                  }],
+                        });
+                        $(".power_cost_chart").html("Total Power Consumption with Cost - Last 7 Days");
+
+                      });
+        $('#monthly_btn').click(function () {
+                        // alert("current_btn");
+                        tot_cons.updateOptions({
+                          series: [{
+                                      name: "Consumption",
+                                      data: [4163, 4445, 5633, 6485, 4254, 6354, 2987],
+                                      color: "#1cc88a"
+                                    }, {
+                                      name: "INR",
+                                      data: [4000, 4203, 6210, 7560, 5287, 6628, 4869],
+                                      color: "#4e73df"
+                                  }],
+                        });
+                        $(".power_cost_chart").html("Total Power Consumption with Cost - Last 30 Days");
+
+                      });
+        $('#yearly_btn').click(function () {
+                        // alert("current_btn");
+                        tot_cons.updateOptions({
+                          series: [{
+                                      name: "Consumption",
+                                      data: [11163, 11445, 22633, 33485, 22254, 33354, 11987],
+                                      color: "#1cc88a"
+                                    }, {
+                                      name: "INR",
+                                      data: [22000, 22203, 33210, 44560, 33287, 44628, 22869],
+                                      color: "#4e73df"
+                                  }],
+                        });
+                        $(".power_cost_chart").html("Total Power Consumption with Cost - Last 365 Days");
+
+                      });
+    </script>
+    <script type="text/JavaScript">
+      var chartData = {
+              labels: ["January", "February", "March", "April", "May", "June", "July"],
+              datasets: [{
+                  type: 'line',
+                  label: 'Actual Cost',
+                  borderColor: window.chartColors.blue,
+                  borderWidth: 2,
+                  fill: false,
+                  data: [
+                      120,220,150,130,250,290,170
+                  ]
+              }, {
+                  type: 'line',
+                  label: 'Baseline Cost',
+                  borderColor: window.chartColors.yellow,
+                  borderWidth: 2,
+                  fill: false,
+                  data: [
+                      220,220,220,220,220,220,220
+                  ]
+              }, {
+                  type: 'bar',
+                  label: 'Actual Power',
+                  backgroundColor: window.chartColors.red,
+                  data: [
+                      280,150,120,130,250,290,170
+                  ],
+                  borderColor: 'white',
+                  borderWidth: 2
+              }, {
+                  type: 'bar',
+                  label: 'Baseline Power',
+                  backgroundColor: window.chartColors.green,
+                  data: [
+                      320,220,190,110,170,210,100
+                  ]
+              }]
+
+          };
+          window.onload = function() {
+              var ctx = document.getElementById("canvas").getContext("2d");
+              ctx.height = 500;
+              window.myMixedChart = new Chart(ctx, {
+                  type: 'bar',
+                  data: chartData,
+                  options: {
+                      responsive: true,
+                      title: {
+                          display: false,
+                          // text: 'Chart.js Combo Bar Line Chart'
+                      },
+                      tooltips: {
+                          mode: 'index',
+                          intersect: true
+                      }
+                  }
+              });
+          };
+    </script>
+    <script type="text/JavaScript">
+      var options = {
+          series: [67],
+          chart: {
+          height: 350,
+          type: 'radialBar',
+          offsetY: -10
+        },
+        plotOptions: {
+          radialBar: {
+            startAngle: -135,
+            track: {
+              background: '#333',
+              startAngle: -135,
+              endAngle: 135,
+            },
+            endAngle: 135,
+            dataLabels: {
+              name: {
+                fontSize: '16px',
+                color: "#fff",
+                offsetY: 120
+              },
+              value: {
+                offsetY: 76,
+                fontSize: '22px',
+                color: "#fff",
+                formatter: function (val) {
+                  return val + "kw";
+                }
+              }
+            }
+          }
+        },
+        fill: {
+          type: 'gradient',
+          gradient: {
+              shade: 'dark',
+            type: 'horizontal',
+            shadeIntensity: 0.5,
+            gradientToColors: ['#f300a9'],
+            inverseColors: true,
+            opacityFrom: 1,
+            opacityTo: 1,
+            stops: [0, 100]
+          },
+        },
+        stroke: {
+          dashArray: 2,
+        },
+        labels: [''],
+        };
+
+        var chart = new ApexCharts(document.querySelector("#total_gauge_new"), options);
+        chart.render();
+    </script>
+    <script>
+      // PUE chart
+      var options = {
+        series: [
+          {
+            name: "Building 1",
+            data: [1.2, 2.3, 1.6, 1.8, 2.3, 1.6, 2.1, 2.0, 1.0, 1.8, 1.5, 1.0],
+            color: "#138681",
+          },
+          {
+            name: "Building 2",
+            data: [1.4, 1.3, 2.5, 1.8, 2.1, 1.8, 2.9, 1.7, 1.6, 1.5, 2.3, 2],
+            color: "#6f1386",
+          },
+          {
+            name: "Building 3",
+            data: [1.7, 2.1, 1.7, 1.2, 2.3, 2.4, 1.9, 2.3, 2, 1.7, 1.6, 1.9],
+            color: "#ac0000",
+          },
+          {
+            name: "Building 4",
+            data: [2.7, 2.3, 1.2, 1.1, 1.3, 2.2, 1.5, 1.6, 2, 2.7, 1.5, 1.2],
+            color: "#00644a",
+          },
+          {
+            name: "Building 5",
+            data: [1.7, 2.5, 2.7, 2.2, 2.8, 1.4, 1.2, 2.1, 1, 1.6, 1.4, 1.2],
+            color: "#8f8d00",
+          },
+          {
+            name: "Building 6",
+            data: [1.2, 2.4, 2.7, 2.2, 1.1, 1.4, 2.9, 1.3, 2.4, 2.7, 2.6, 1.2],
+            color: "#18637c",
+          },
+        ],
+        chart: {
+          background: "#23232a",
+          height: 250,
+          type: "line",
+          zoom: {
+            enabled: false,
+          },
+          color: "#fff",
+        },
+        dataLabels: {
+          enabled: false,
+        },
+        stroke: {
+          width: [1, 1, 1],
+          // curve: 'straight',
+          // dashArray: [0, 8, 5]
+        },
+        title: {
+          text: "",
+          align: "left",
+        },
+        legend: {
+          tooltipHoverFormatter: function (val, opts) {
+            return (
+              val +
+              " - " +
+              opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] +
+              ""
+            );
+          },
+          labels: {
+            colors: "#fff",
+            useSeriesColors: false,
+          },
+        },
+        markers: {
+          size: 0,
+          hover: {
+            sizeOffset: 6,
+          },
+        },
+        xaxis: {
+          categories: [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec",
+          ],
+          labels: {
+            style: {
+              fontSize: "12px",
+              fontFamily: "Helvetica, Arial, sans-serif",
+              fontWeight: 400,
+              cssClass: "apexcharts-xaxis-label",
+            },
+          },
+        },
+        yaxis: {
+          labels: {
+            style: {
+              fontSize: "12px",
+              fontFamily: "Helvetica, Arial, sans-serif",
+              fontWeight: 400,
+              cssClass: "apexcharts-xaxis-label",
+            },
+          },
+        },
+        tooltip: {
+          y: [
+            {
+              title: {
+                formatter: function (val) {
+                  return val;
+                },
+              },
+            },
+            {
+              title: {
+                formatter: function (val) {
+                  return val;
+                },
+              },
+            },
+            {
+              title: {
+                formatter: function (val) {
+                  return val;
+                },
+              },
+            },
+          ],
+        },
+        grid: {
+          borderColor: "#f1f1f1",
+        },
+        theme: {
+          mode: "dark",
+          palette: "palette1",
+        },
+      };
+
+      var chart = new ApexCharts(document.querySelector("#pue_chart"), options);
+      chart.render();
+
+      // energy_distr
+
+      var options = {
+        series: [7916.51, 1287.88, 4059, 5465.61, 3093.4],
+        chart: {
+          width: 480,
+          type: "pie",
+        },
+        legend: {
+          position: "bottom",
+          labels: {
+            colors: "#fff",
+          },
+        },
+        labels: [
+          "IT Load",
+          "COOLING LOAD",
+          "MISC",
+          "UPS LOSSES",
+          "TRANSFORMER LOSSES",
+        ],
+        responsive: [
+          {
+            breakpoint: 480,
+            options: {
+              chart: {
+                width: 200,
+              },
+              legend: {
+                position: "bottom",
+              },
+            },
+          },
+        ],
+      };
+
+      var facility_chart = new ApexCharts(
+        document.querySelector("#facility_load"),
+        options
+      );
+      facility_chart.render();
+
+      $("#facility_weekly_btn").click(function () {
+        facility_chart.updateOptions({
+          series: [1197.51, 954.88, 2033, 2392.61, 1230.4],
+        });
+
+        $("h6.facility_load_chart").html(
+          "Facility Consumption (kWh) - Last 7 Days"
+        );
+        $(".chart-unit").html("7807.12 kWh");
+      });
+      $("#facility_monthly_btn").click(function () {
+        facility_chart.updateOptions({
+          series: [7916.51, 1287.88, 4059, 5465.61, 3093.4],
+        });
+        $("h6.facility_load_chart").html(
+          "Facility Consumption (kWh) - Last 30 Days"
+        );
+        $(".chart-unit").html("21822.4 kWh");
+      });
+      $("#facility_yearly_btn").click(function () {
+        facility_chart.updateOptions({
+          series: [42197.51, 55314.88, 33243, 72592.61, 27340.4],
+        });
+        $("h6.facility_load_chart").html(
+          "Facility Consumption (kWh) -  Last 365 Days"
+        );
+        $(".chart-unit").html("230687.52 kWh");
+      });
+
+      //breakdown chart
+
+      var options = {
+        series: [1, 2, 3, 1.1, 0],
+        chart: {
+          width: 400,
+          type: "pie",
+        },
+        legend: {
+          position: "bottom",
+          labels: {
+            colors: "#fff",
+          },
+        },
+        labels: [
+          "Building 1",
+          "Building 2",
+          "Building 3",
+          "Building 4",
+          "Building 5",
+        ],
+        responsive: [
+          {
+            breakpoint: 480,
+            options: {
+              chart: {
+                width: 150,
+              },
+              legend: {
+                position: "bottom",
+              },
+            },
+          },
+        ],
+      };
+
+      var chart = new ApexCharts(document.querySelector("#breakdown"), options);
+      chart.render();
+
+      $("#current_btn").click(function () {
+        // alert("current_btn");
+        chart.update({
+          series: [97916.51, 51287.88, 4059, 5465.61, 3093.4],
+        });
+      });
+
+      $("#previous_btn").click(function () {
+        // alert("previous_btn");
+        chart.update({
+          series: [234.51, 345.88, 4535, 4554.61, 6543.4],
+        });
+      });
+    </script>
+    <script type="text/JavaScript">
+      $(function(){
+         var hash = $(location).attr('hash').substr(1);
+         $('#locationName').html(hash);
+      });
+      function buildHandler(value) {
+          window.location.assign(`${value}.html`);
+      }
+    </script>
+    <script>
+      // $(function () {
+      //     var socket = io.connect('localhost:1337');
+      //     socket.on('log_message', function(data) {
+      //         console.log(data);
+      //         function getVal(code) {
+      //             return Object.values(data.values).filter(user => user.name === code);
+      //         }
+
+      //         var RunHrs = getVal('RunHrs');
+      //         var SupplyFanCmd = getVal('SupplyFanCmd');
+
+      //         var SupplyFanCmdStatus = SupplyFanCmd[0].value;
+      //         var SupplyFanCmdKwh = RunHrs[0].value;
+      //         range1.value = 555.3;
+      //         $('#SF_status').html(SupplyFanCmdStatus);
+      //         $('.SF_value span').html(SupplyFanCmdKwh);
+      //     });
+      //   });
+    </script>
+  </body>
+</html>
